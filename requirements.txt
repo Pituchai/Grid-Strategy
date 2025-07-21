@@ -1,0 +1,8 @@
+binance
+numpy
+pandas
+requests
+datetime
+warnings
+
+python version >= 3.13
