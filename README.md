@@ -1,3 +1,3 @@
-# Trailing-Grid-Strategy
+# Grid-Strategy
 
 - config_manager.py 
