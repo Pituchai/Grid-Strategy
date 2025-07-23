@@ -1,3 +1,2 @@
 # Grid-Strategy
-
-- config_manager.py 
+### On progress : Design Syetem & Planing Money Management
