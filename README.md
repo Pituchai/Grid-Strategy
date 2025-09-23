@@ -8,7 +8,7 @@
 
 ## 🚀 Quick Start Guide
 
-### 1️⃣ **Setup API Keys (TESTNET FIRST!)**
+### 1️⃣ **Setup API Keys (TESTNET/)**
 
 Create `secrets.json` in the project root:
 
