@@ -1,0 +1,169 @@
+# ============================================================================
+# DYNAMIC GRID TRADING STRATEGY - MASTER CONFIGURATION
+# ============================================================================
+# Edit this ONE file to control your entire trading strategy
+# After changes, restart: python main/safe_testnet_demo.py
+# ============================================================================
+
+# 🔑 API CONFIGURATION
+api:
+  # API credentials loaded from secrets.json (not stored here for security)
+  
+  # Trading environment (IMPORTANT!)
+  testnet: true                    # true = fake money, false = real money
+  base_url: "https://testnet.binance.vision"  # Auto-set based on testnet flag
+
+# 📊 TRADING CONFIGURATION  
+trading:
+  # What to trade
+  symbol: "BTCUSDT"               # Trading pair (BTCUSDT, ETHUSDT, etc.)
+  base_currency: "BTC"            # What you're buying/selling
+  quote_currency: "USDT"          # What you're paying with
+  
+  # Order settings
+  base_order_quantity: 0.001      # Base order size (will be calculated per grid)
+  order_type: "LIMIT"             # Order type (LIMIT recommended)
+  time_in_force: "GTC"            # Good Till Cancelled
+  
+  # Timing
+  poll_interval: 5                # Seconds between market checks
+  
+# 🏗️ GRID STRATEGY SETTINGS
+grid:
+  # Grid structure (THIS IS WHERE YOU TUNE PERFORMANCE!)
+  grid_range_pct: 2.5             # ±% range from center (2.5 = ±2.5% = 5% total)
+  grid_spacing_pct: 0.50          # % between each grid level
+  levels: 10                      # Total number of grid levels (5 buy + 5 sell)
+  
+  # Capital allocation
+  capital_per_grid_pct: 10.0      # % of capital to use per grid level
+  total_capital_usage_pct: 100.0  # % of total capital to use for strategy
+  
+  # Grid behavior
+  trailing_enabled: true          # Move grid as price trends
+  trailing_direction: "both"      # "up", "down", or "both"
+  trailing_threshold_pct: 0.75    # % move needed to shift grid
+  trailing_ma_period: 20          # Moving average period for grid center
+  
+  # Rebalancing
+  rebalance_threshold_pct: 2.0    # % deviation before rebalancing
+  auto_rebalance: true            # Automatically rebalance grid
+
+# 🎯 PERFORMANCE TARGETS
+performance:
+  # Profit expectations
+  target_profit_per_cycle_pct: 0.35    # Target profit per complete cycle
+  daily_target_cycles: 12              # Desired cycles per day
+  daily_target_profit_pct: 4.375      # Expected daily return
+  monthly_target_profit_pct: 96.25    # Expected monthly return (22 days)
+  
+  # Tracking
+  track_cycles: true              # Monitor complete trading cycles
+  log_performance: true           # Log performance metrics
+  save_trades: true               # Save trade history
+
+# ⚠️ RISK MANAGEMENT (CRITICAL FOR SAFETY!)
+risk:
+  # Position limits
+  max_exposure_pct: 100.0         # Maximum capital exposure
+  position_size_mode: "percentage" # "percentage" or "fixed"
+  
+  # Loss protection
+  max_drawdown_pct: 15.0          # Emergency stop if losses exceed this
+  daily_loss_limit_pct: 10.0     # Stop trading if daily loss exceeds this
+  stop_loss_pct: 10.0            # Individual position stop loss
+  
+  # Pattern detection
+  max_consecutive_losses: 5       # Alert after this many consecutive losses
+  min_win_rate_pct: 60.0         # Alert if win rate drops below this
+  
+  # Emergency controls
+  emergency_stop_enabled: true    # Enable automatic emergency stops
+  pause_on_high_risk: true       # Pause trading during high risk events
+
+# 💰 FEE OPTIMIZATION
+fees:
+  # Fee structure
+  maker_fee_pct: 0.1             # Maker fee percentage
+  taker_fee_pct: 0.1             # Taker fee percentage
+  
+  # Fee optimization
+  use_fee_discount: false        # Disable special fee discount features
+  fee_discount_pct: 0.0          # No fee discount
+  min_fee_balance: 0.0           # No minimum balance requirement
+  
+  # Calculations
+  include_fees_in_calculation: true # Include fees in profit calculations
+
+# 📈 ADVANCED SETTINGS
+advanced:
+  # Market analysis
+  volatility_adjustment: true     # Adjust grid based on volatility
+  volume_filter: true            # Filter trades based on volume
+  min_volume_24h: 1000000        # Minimum 24h volume for trading
+  
+  # Technical indicators
+  use_technical_indicators: false # Use additional indicators (RSI, MACD, etc.)
+  rsi_oversold: 30               # RSI oversold level
+  rsi_overbought: 70             # RSI overbought level
+  
+  # Order management
+  cancel_open_orders_on_stop: true # Cancel orders when stopping
+  max_open_orders: 20            # Maximum simultaneous open orders
+
+# 📊 LOGGING & MONITORING
+logging:
+  # Log levels
+  main_log_level: "INFO"         # DEBUG, INFO, WARNING, ERROR
+  console_log_level: "INFO"      # Console output level
+  
+  # Log files
+  log_directory: "logs"          # Directory for log files
+  max_log_size_mb: 50           # Max size before rotation
+  backup_count: 5               # Number of backup log files
+  
+  # Alerts
+  enable_email_alerts: false     # Email notifications
+  alert_on_profit_milestone: true # Alert on profit milestones
+  alert_on_risk_events: true     # Alert on risk events
+  
+  # Performance monitoring
+  create_performance_charts: true # Generate performance charts
+  export_trades_csv: true        # Export trades to CSV
+  real_time_monitoring: true     # Enable real-time log monitoring
+
+# 🎛️ QUICK PRESETS (Uncomment to use)
+# ============================================================================
+# CONSERVATIVE PRESET (Lower risk, lower reward)
+# grid:
+#   grid_range_pct: 1.5
+#   capital_per_grid_pct: 8.0
+#   levels: 8
+# risk:
+#   max_drawdown_pct: 10.0
+#   daily_loss_limit_pct: 5.0
+
+# AGGRESSIVE PRESET (Higher risk, higher reward) 
+# grid:
+#   grid_range_pct: 3.5
+#   capital_per_grid_pct: 12.0
+#   levels: 12
+# risk:
+#   max_drawdown_pct: 20.0
+#   daily_loss_limit_pct: 15.0
+
+# SCALPING PRESET (Tight grids, frequent trades)
+# grid:
+#   grid_range_pct: 1.0
+#   grid_spacing_pct: 0.25
+#   levels: 16
+# trading:
+#   poll_interval: 2
+
+# ============================================================================
+# NOTES:
+# - Always test on testnet first (testnet: true)
+# - Start with small amounts when going live
+# - Monitor logs and performance regularly  
+# - Adjust grid_range_pct and capital_per_grid_pct for different risk levels
+# ============================================================================

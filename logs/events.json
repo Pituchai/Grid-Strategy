@@ -1,0 +1,132 @@
+[
+  {
+    "timestamp": "2025-09-23T18:44:35.045602",
+    "session_id": "20250923_184435",
+    "event_type": "signal",
+    "event_subtype": "volatility_adjustment",
+    "data": {
+      "signal_type": "volatility_adjustment",
+      "volatility_ratio": 0.020000000000000014,
+      "regime": "very_low",
+      "original_spacing_pct": 0.5,
+      "adjusted_spacing_pct": 0.35,
+      "spacing_multiplier": 0.7,
+      "position_multiplier": 1.1,
+      "atr_value": 2261.1330000000016,
+      "current_price": 113056.65
+    }
+  },
+  {
+    "timestamp": "2025-09-23T18:49:03.136939",
+    "session_id": "20250923_184903",
+    "event_type": "signal",
+    "event_subtype": "volatility_adjustment",
+    "data": {
+      "signal_type": "volatility_adjustment",
+      "volatility_ratio": 0.02000000000000013,
+      "regime": "very_low",
+      "original_spacing_pct": 0.5,
+      "adjusted_spacing_pct": 0.35,
+      "spacing_multiplier": 0.7,
+      "position_multiplier": 1.1,
+      "atr_value": 2259.8220000000147,
+      "current_price": 112991.1
+    }
+  },
+  {
+    "timestamp": "2025-09-23T19:34:24.997746",
+    "session_id": "20250923_193424",
+    "event_type": "signal",
+    "event_subtype": "capital_initialized",
+    "data": {
+      "signal_type": "capital_initialized",
+      "total_capital": 20000.0,
+      "capital_per_grid": 2000.0,
+      "allocation_pct": 10.0
+    }
+  },
+  {
+    "timestamp": "2025-09-23T19:35:50.192846",
+    "session_id": "20250923_193550",
+    "event_type": "signal",
+    "event_subtype": "capital_initialized",
+    "data": {
+      "signal_type": "capital_initialized",
+      "total_capital": 20000.0,
+      "capital_per_grid": 2000.0,
+      "allocation_pct": 10.0
+    }
+  },
+  {
+    "timestamp": "2025-09-23T19:35:50.313823",
+    "session_id": "20250923_193550",
+    "event_type": "signal",
+    "event_subtype": "volatility_adjustment",
+    "data": {
+      "signal_type": "volatility_adjustment",
+      "volatility_ratio": 0.009999999999999912,
+      "regime": "very_low",
+      "original_spacing_pct": 0.5,
+      "adjusted_spacing_pct": 0.35,
+      "spacing_multiplier": 0.7,
+      "position_multiplier": 1.1,
+      "atr_value": 1128.9712999999902,
+      "current_price": 112897.13
+    }
+  },
+  {
+    "timestamp": "2025-09-23T19:35:50.315217",
+    "session_id": "20250923_193550",
+    "event_type": "signal",
+    "event_subtype": "grid_generated",
+    "data": {
+      "signal_type": "grid_generated",
+      "center_price": 112897.13,
+      "total_levels": 10,
+      "price_range": "110921.43 - 114872.83",
+      "spacing_pct": 0.35
+    }
+  },
+  {
+    "timestamp": "2025-09-23T20:06:37.495246",
+    "session_id": "20250923_200637",
+    "event_type": "signal",
+    "event_subtype": "capital_initialized",
+    "data": {
+      "signal_type": "capital_initialized",
+      "total_capital": 20000.0,
+      "capital_per_grid": 2000.0,
+      "allocation_pct": 10.0
+    }
+  },
+  {
+    "timestamp": "2025-09-23T20:06:37.625155",
+    "session_id": "20250923_200637",
+    "event_type": "signal",
+    "event_subtype": "volatility_adjustment",
+    "data": {
+      "signal_type": "volatility_adjustment",
+      "volatility_ratio": 0.009999999999999884,
+      "regime": "very_low",
+      "original_spacing_pct": 0.5,
+      "adjusted_spacing_pct": 0.35,
+      "spacing_multiplier": 0.7,
+      "position_multiplier": 1.1,
+      "atr_value": 1128.407199999987,
+      "current_price": 112840.72
+    }
+  },
+  {
+    "timestamp": "2025-09-23T20:06:37.626464",
+    "session_id": "20250923_200637",
+    "event_type": "signal",
+    "event_subtype": "grid_generated",
+    "data": {
+      "signal_type": "grid_generated",
+      "center_price": 112840.72,
+      "total_levels": 10,
+      "price_range": "110866.01 - 114815.43",
+      "spacing_pct": 0.35
+    }
+  }
+]

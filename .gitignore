@@ -2,3 +2,5 @@ config/secrets.json
 config/config.yaml
 __pycache__/
 *.pyc
+secrets.json
+src/config/config.yaml

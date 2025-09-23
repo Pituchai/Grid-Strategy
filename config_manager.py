@@ -35,30 +35,36 @@ class ConfigManager:
         """
         Ensure required sections and keys exist and have valid types/ranges.
         """
-        required_sections = ['api', 'grid', 'risk', 'trading']
+        required_sections = ['api', 'grid', 'risk', 'trading', 'performance', 'fees', 'advanced', 'logging']
         for section in required_sections:
             if section not in self.config:
                 raise KeyError(f"Missing required config section: '{section}'")
 
-        # Example check: API keys
+        # API section should exist but keys can be empty (loaded from secrets.json)
         api = self.config['api']
-        if not api.get('api_key') or not api.get('api_secret'):
-            raise ValueError("API credentials (api_key & api_secret) must be provided")
+        # We don't require API keys in the config file as they come from secrets.json
 
         # Grid config sanity
         grid = self.config['grid']
-        if grid.get('levels') <= 0 or grid.get('step_size') <= 0:
-            raise ValueError("Grid 'levels' and 'step_size' must be positive numbers")
+        levels = grid.get('levels', 1)
+        grid_spacing_pct = grid.get('grid_spacing_pct', 0.5)  # Updated for centralized config
+        
+        if levels is not None and levels <= 0:
+            raise ValueError("Grid 'levels' must be a positive number")
+        if grid_spacing_pct is not None and grid_spacing_pct <= 0:
+            raise ValueError("Grid 'grid_spacing_pct' must be a positive number")
 
         # Risk limits
         risk = self.config['risk']
-        if not (0 < risk.get('max_exposure_pct', 0) <= 100):
+        max_exposure = risk.get('max_exposure_pct', 50)
+        if max_exposure is not None and not (0 < max_exposure <= 100):
             raise ValueError("Risk 'max_exposure_pct' must be between 0 and 100")
 
         # Trading parameters
         trading = self.config['trading']
-        if trading.get('order_quantity') <= 0:
-            raise ValueError("Trading 'order_quantity' must be positive")
+        base_order_quantity = trading.get('base_order_quantity', 0.001)  # Updated for centralized config
+        if base_order_quantity is not None and base_order_quantity <= 0:
+            raise ValueError("Trading 'base_order_quantity' must be positive")
 
     def get_api_config(self) -> dict:
         """Return API configuration: keys, endpoints, etc."""
@@ -75,6 +81,22 @@ class ConfigManager:
     def get_trading_config(self) -> dict:
         """Return trading execution parameters."""
         return self.config.get('trading', {})
+    
+    def get_performance_config(self) -> dict:
+        """Return performance tracking parameters."""
+        return self.config.get('performance', {})
+    
+    def get_fees_config(self) -> dict:
+        """Return fee structure and optimization parameters."""
+        return self.config.get('fees', {})
+    
+    def get_advanced_config(self) -> dict:
+        """Return advanced configuration parameters."""
+        return self.config.get('advanced', {})
+    
+    def get_logging_config(self) -> dict:
+        """Return logging and monitoring parameters."""
+        return self.config.get('logging', {})
 
     def update_runtime_config(self, section: str, key: str, value):
         """
