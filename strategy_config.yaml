@@ -21,7 +21,7 @@ trading:
   quote_currency: "USDT"          # What you're paying with
   
   # Order settings
-  base_order_quantity: 0.001      # Base order size (will be calculated per grid)
+  base_order_quantity: 0.0001      # Base order size (will be calculated per grid)
   order_type: "LIMIT"             # Order type (LIMIT recommended)
   time_in_force: "GTC"            # Good Till Cancelled
   
@@ -100,7 +100,7 @@ advanced:
   # Market analysis
   volatility_adjustment: true     # Adjust grid based on volatility
   volume_filter: true            # Filter trades based on volume
-  min_volume_24h: 1000000        # Minimum 24h volume for trading
+  min_volume_24h: 10        # Minimum 24h volume for trading
   
   # Technical indicators
   use_technical_indicators: false # Use additional indicators (RSI, MACD, etc.)

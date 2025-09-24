@@ -32,14 +32,38 @@ class EventLogger:
     
     def __init__(self, config_manager=None, log_dir="logs", log_filename="events.csv"):
         self.config = config_manager
-        self.log_dir = log_dir
-        os.makedirs(log_dir, exist_ok=True)
+        
+        # Load logging configuration from YAML
+        if config_manager and hasattr(config_manager, 'get_logging_config'):
+            log_cfg = config_manager.get_logging_config()
+            self.log_dir = log_cfg.get('log_directory', 'logs')
+            self.max_log_size_mb = log_cfg.get('max_log_size_mb', 50)
+            self.backup_count = log_cfg.get('backup_count', 5)
+            self.main_log_level = log_cfg.get('main_log_level', 'INFO')
+            self.console_log_level = log_cfg.get('console_log_level', 'INFO')
+            self.enable_email_alerts = log_cfg.get('enable_email_alerts', False)
+            self.create_performance_charts = log_cfg.get('create_performance_charts', True)
+            self.export_trades_csv = log_cfg.get('export_trades_csv', True)
+            self.real_time_monitoring = log_cfg.get('real_time_monitoring', True)
+        else:
+            # Default values if no config manager
+            self.log_dir = log_dir
+            self.max_log_size_mb = 50
+            self.backup_count = 5
+            self.main_log_level = 'INFO'
+            self.console_log_level = 'INFO'
+            self.enable_email_alerts = False
+            self.create_performance_charts = True
+            self.export_trades_csv = True
+            self.real_time_monitoring = True
+        
+        os.makedirs(self.log_dir, exist_ok=True)
         
         # Initialize multiple log files
-        self.csv_file = os.path.join(log_dir, log_filename)
-        self.json_file = os.path.join(log_dir, "events.json")
-        self.performance_file = os.path.join(log_dir, "performance.json")
-        self.risk_file = os.path.join(log_dir, "risk_events.json")
+        self.csv_file = os.path.join(self.log_dir, log_filename)
+        self.json_file = os.path.join(self.log_dir, "events.json")
+        self.performance_file = os.path.join(self.log_dir, "performance.json")
+        self.risk_file = os.path.join(self.log_dir, "risk_events.json")
         
         # Initialize structured logging
         self._init_structured_logging()
@@ -53,15 +77,19 @@ class EventLogger:
         }
 
     def _init_structured_logging(self):
-        """Initialize structured logging with rotation."""
-        # Create main logger
+        """Initialize structured logging with YAML configuration."""
+        # Create main logger with YAML-configured level
         self.logger = logging.getLogger('GridTrading')
-        self.logger.setLevel(logging.INFO)
+        self.logger.setLevel(getattr(logging, self.main_log_level.upper(), logging.INFO))
         
-        # Create rotating file handler
+        # Clear any existing handlers to avoid duplicates
+        self.logger.handlers.clear()
+        
+        # Create rotating file handler with YAML settings
         log_file = os.path.join(self.log_dir, 'grid_trading.log')
+        max_bytes = self.max_log_size_mb * 1024 * 1024
         handler = RotatingFileHandler(
-            log_file, maxBytes=10*1024*1024, backupCount=5
+            log_file, maxBytes=max_bytes, backupCount=self.backup_count
         )
         
         # Create formatter
@@ -72,11 +100,15 @@ class EventLogger:
         handler.setFormatter(formatter)
         self.logger.addHandler(handler)
         
-        # Add console handler for important events
+        # Add console handler with YAML-configured level
         console_handler = logging.StreamHandler()
-        console_handler.setLevel(logging.WARNING)
+        console_handler.setLevel(getattr(logging, self.console_log_level.upper(), logging.INFO))
         console_handler.setFormatter(formatter)
         self.logger.addHandler(console_handler)
+        
+        # Log configuration loaded
+        self.logger.info(f"Logging configured: Main={self.main_log_level}, Console={self.console_log_level}")
+        self.logger.info(f"Log directory: {self.log_dir}, Max size: {self.max_log_size_mb}MB, Backup count: {self.backup_count}")
     
     def _init_csv_file(self):
         """Initialize enhanced CSV log file."""
@@ -189,17 +221,18 @@ class EventLogger:
             "error": data.get("error", "")
         }
         
-        # Write to CSV
-        header = [
-            "timestamp", "session_id", "event_type", "event_subtype",
-            "symbol", "side", "quantity", "price", "order_id",
-            "grid_level", "cycle_id", "pnl", "fee", "fee_asset", 
-            "risk_level", "message", "data_json", "error"
-        ]
-        
-        with open(self.csv_file, "a", newline='') as f:
-            writer = csv.writer(f)
-            writer.writerow([row.get(h, "") for h in header])
+        # Write to CSV only if enabled in YAML config
+        if self.export_trades_csv:
+            header = [
+                "timestamp", "session_id", "event_type", "event_subtype",
+                "symbol", "side", "quantity", "price", "order_id",
+                "grid_level", "cycle_id", "pnl", "fee", "fee_asset", 
+                "risk_level", "message", "data_json", "error"
+            ]
+            
+            with open(self.csv_file, "a", newline='') as f:
+                writer = csv.writer(f)
+                writer.writerow([row.get(h, "") for h in header])
         
         # Also write to JSON log
         self._write_json_event(event_type, event_subtype, data, timestamp)
@@ -384,3 +417,40 @@ class EventLogger:
             json.dump(session_data, f, indent=2, default=str)
             
         self.logger.info(f"Session data exported to: {output_file}")
+    
+    def should_send_email_alert(self, alert_type: str) -> bool:
+        """Check if email alerts are enabled for this type."""
+        if not self.enable_email_alerts:
+            return False
+        
+        # Load alert settings from YAML config
+        if self.config and hasattr(self.config, 'get_logging_config'):
+            log_cfg = self.config.get_logging_config()
+            if alert_type == 'profit_milestone':
+                return log_cfg.get('alert_on_profit_milestone', True)
+            elif alert_type == 'risk_events':
+                return log_cfg.get('alert_on_risk_events', True)
+        
+        return False
+    
+    def should_create_performance_charts(self) -> bool:
+        """Check if performance chart generation is enabled."""
+        return self.create_performance_charts
+    
+    def is_real_time_monitoring_enabled(self) -> bool:
+        """Check if real-time monitoring is enabled."""
+        return self.real_time_monitoring
+    
+    def get_logging_configuration_summary(self) -> dict:
+        """Get current logging configuration summary."""
+        return {
+            'log_directory': self.log_dir,
+            'max_log_size_mb': self.max_log_size_mb,
+            'backup_count': self.backup_count,
+            'main_log_level': self.main_log_level,
+            'console_log_level': self.console_log_level,
+            'enable_email_alerts': self.enable_email_alerts,
+            'create_performance_charts': self.create_performance_charts,
+            'export_trades_csv': self.export_trades_csv,
+            'real_time_monitoring': self.real_time_monitoring
+        }

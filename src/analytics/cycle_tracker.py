@@ -19,22 +19,26 @@ class CycleTracker:
         self.total_profit = 0.0
         self.total_loss = 0.0
         self.total_fees_paid = 0.0
-        self.fees_saved_bnb = 0.0
         self.losing_cycles = 0
         self.winning_cycles = 0
         self.max_drawdown = 0.0
         self.current_drawdown = 0.0
         
-        # Load performance targets from config
+        # Load performance targets from config (YAML compliance)
         perf_cfg = self.cfg.get_performance_config() if hasattr(self.cfg, 'get_performance_config') else {}
-        self.target_profit_per_cycle = perf_cfg.get('expected_profit_per_cycle_pct', 0.35) / 100
+        self.target_profit_per_cycle = perf_cfg.get('target_profit_per_cycle_pct', 0.35) / 100
         self.daily_target_profit = perf_cfg.get('daily_target_profit_pct', 4.375) / 100
-        self.target_cycles_per_day = perf_cfg.get('target_cycles_per_day', 12)
+        self.daily_target_cycles = perf_cfg.get('daily_target_cycles', 12)
+        self.track_cycles = perf_cfg.get('track_cycles', True)
+        self.log_performance = perf_cfg.get('log_performance', True)
         
     def start_new_cycle(self, initial_price: float, grid_levels: List[Dict]):
         """
         Start tracking a new trading cycle.
         """
+        if not self.track_cycles:
+            return  # Skip cycle tracking if disabled in YAML
+            
         cycle_id = f"cycle_{int(time.time())}"
         
         self.current_cycle = {
@@ -86,13 +90,12 @@ class CycleTracker:
         self.current_cycle['orders_filled'] += 1
         self.current_cycle['fees_paid'] += fee
         
-        # Track BNB fee savings
-        # Calculate standard fees
+        # Track fees from trades
         if fee_asset == 'USDT':
             fees_cfg = self.cfg.get_fees_config() if hasattr(self.cfg, 'get_fees_config') else {}
             base_fee_rate = fees_cfg.get('maker_fee_pct', 0.1) / 100
             fee_amount = (price * quantity) * base_fee_rate
-            self.total_fees += fee_amount
+            self.total_fees_paid += fee_amount
         
         self.logger.log_signal("order_filled", {
             "cycle_id": self.current_cycle['id'],
@@ -246,7 +249,6 @@ class CycleTracker:
             'total_gross_loss': self.total_loss,
             'total_net_pnl': net_pnl,
             'total_fees_paid': self.total_fees_paid,
-            'fees_saved_bnb': self.fees_saved_bnb,
             'max_drawdown': self.max_drawdown,
             'current_drawdown': self.current_drawdown,
             'profit_factor': (self.total_profit / self.total_loss) if self.total_loss > 0 else float('inf'),
@@ -330,6 +332,56 @@ class CycleTracker:
                 })
         
         return alerts
+    
+    def get_performance_vs_targets(self):
+        """Get performance analysis against YAML targets."""
+        if not self.log_performance:
+            return {"performance_logging": "disabled"}
+        
+        today = datetime.now().date()
+        daily_stats = self.daily_stats.get(today, {
+            'cycles_completed': 0,
+            'net_profit': 0.0,
+            'target_cycles_met': 0
+        })
+        
+        # Calculate progress toward daily targets
+        cycles_progress = (daily_stats['cycles_completed'] / self.daily_target_cycles) * 100
+        target_cycles_rate = (daily_stats['target_cycles_met'] / max(daily_stats['cycles_completed'], 1)) * 100
+        
+        # Overall performance metrics
+        total_cycles = len(self.cycles)
+        total_net_profit = sum(cycle['net_profit'] for cycle in self.cycles)
+        successful_cycles = len([c for c in self.cycles if c['profit_pct'] >= (self.target_profit_per_cycle * 100)])
+        success_rate = (successful_cycles / max(total_cycles, 1)) * 100
+        
+        return {
+            "performance_logging": "enabled",
+            "daily_targets": {
+                "target_cycles": self.daily_target_cycles,
+                "completed_cycles": daily_stats['cycles_completed'],
+                "cycles_progress_pct": min(cycles_progress, 100),
+                "cycles_remaining": max(0, self.daily_target_cycles - daily_stats['cycles_completed'])
+            },
+            "cycle_quality": {
+                "target_profit_per_cycle_pct": self.target_profit_per_cycle * 100,
+                "cycles_meeting_target": daily_stats['target_cycles_met'],
+                "target_success_rate_pct": target_cycles_rate,
+                "overall_success_rate_pct": success_rate
+            },
+            "profit_tracking": {
+                "daily_target_profit_pct": self.daily_target_profit * 100,
+                "current_daily_profit": daily_stats['net_profit'],
+                "total_profit": total_net_profit,
+                "avg_profit_per_cycle": total_net_profit / max(total_cycles, 1)
+            },
+            "yaml_settings": {
+                "track_cycles": self.track_cycles,
+                "log_performance": self.log_performance,
+                "daily_target_cycles": self.daily_target_cycles,
+                "target_profit_per_cycle_pct": self.target_profit_per_cycle * 100
+            }
+        }
     
     def export_performance_data(self, filepath: str):
         """

@@ -1,0 +1,268 @@
+[
+  {
+    "timestamp": "2025-09-24T16:44:48.362133",
+    "session_id": "20250924_164448",
+    "event_type": "signal",
+    "event_subtype": "fee_calculator_initialized",
+    "data": {
+      "signal_type": "fee_calculator_initialized",
+      "maker_fee_pct": 0.1,
+      "taker_fee_pct": 0.1,
+      "use_fee_discount": false,
+      "fee_discount_pct": 0.0,
+      "include_fees_in_calculation": true
+    }
+  },
+  {
+    "timestamp": "2025-09-24T16:44:48.362804",
+    "session_id": "20250924_164448",
+    "event_type": "signal",
+    "event_subtype": "csv_trade_file_initialized",
+    "data": {
+      "signal_type": "csv_trade_file_initialized",
+      "file_path": "logs/trade_history.csv",
+      "headers": [
+        "timestamp",
+        "trade_id",
+        "symbol",
+        "side",
+        "quantity",
+        "price",
+        "grid_level",
+        "order_id",
+        "pnl",
+        "fees",
+        "trade_type",
+        "notes"
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-24T16:44:48.363713",
+    "session_id": "20250924_164448",
+    "event_type": "signal",
+    "event_subtype": "capital_initialized",
+    "data": {
+      "signal_type": "capital_initialized",
+      "total_capital": 20000.0,
+      "capital_per_grid": 2000.0,
+      "allocation_pct": 10.0
+    }
+  },
+  {
+    "timestamp": "2025-09-24T16:44:48.488066",
+    "session_id": "20250924_164448",
+    "event_type": "signal",
+    "event_subtype": "volatility_adjustment",
+    "data": {
+      "signal_type": "volatility_adjustment",
+      "volatility_ratio": 0.009999999999999861,
+      "regime": "very_low",
+      "original_spacing_pct": 0.5,
+      "adjusted_spacing_pct": 0.35,
+      "spacing_multiplier": 0.7,
+      "position_multiplier": 1.1,
+      "atr_value": 1127.4000999999844,
+      "current_price": 112740.01
+    }
+  },
+  {
+    "timestamp": "2025-09-24T16:44:48.488945",
+    "session_id": "20250924_164448",
+    "event_type": "signal",
+    "event_subtype": "grid_generated",
+    "data": {
+      "signal_type": "grid_generated",
+      "center_price": 112740.01,
+      "total_levels": 10,
+      "price_range": "110767.06 - 114712.96",
+      "spacing_pct": 0.35
+    }
+  },
+  {
+    "timestamp": "2025-09-24T16:44:51.558365",
+    "session_id": "20250924_164451",
+    "event_type": "signal",
+    "event_subtype": "volume_filter_blocked",
+    "data": {
+      "signal_type": "volume_filter_blocked",
+      "symbol": "BTCUSDT",
+      "current_volume": 702.53649,
+      "minimum_required": 1000,
+      "reason": "Volume $703 below minimum $1,000"
+    }
+  },
+  {
+    "timestamp": "2025-09-24T16:44:51.683889",
+    "session_id": "20250924_164451",
+    "event_type": "signal",
+    "event_subtype": "volume_filter_blocked",
+    "data": {
+      "signal_type": "volume_filter_blocked",
+      "symbol": "BTCUSDT",
+      "current_volume": 702.53649,
+      "minimum_required": 1000,
+      "reason": "Volume $703 below minimum $1,000"
+    }
+  },
+  {
+    "timestamp": "2025-09-24T16:44:56.864422",
+    "session_id": "20250924_164456",
+    "event_type": "signal",
+    "event_subtype": "volume_filter_blocked",
+    "data": {
+      "signal_type": "volume_filter_blocked",
+      "symbol": "BTCUSDT",
+      "current_volume": 702.53649,
+      "minimum_required": 1000,
+      "reason": "Volume $703 below minimum $1,000"
+    }
+  },
+  {
+    "timestamp": "2025-09-24T16:44:56.978642",
+    "session_id": "20250924_164456",
+    "event_type": "signal",
+    "event_subtype": "volume_filter_blocked",
+    "data": {
+      "signal_type": "volume_filter_blocked",
+      "symbol": "BTCUSDT",
+      "current_volume": 702.53649,
+      "minimum_required": 1000,
+      "reason": "Volume $703 below minimum $1,000"
+    }
+  },
+  {
+    "timestamp": "2025-09-24T16:45:02.123143",
+    "session_id": "20250924_164502",
+    "event_type": "signal",
+    "event_subtype": "volume_filter_blocked",
+    "data": {
+      "signal_type": "volume_filter_blocked",
+      "symbol": "BTCUSDT",
+      "current_volume": 702.53649,
+      "minimum_required": 1000,
+      "reason": "Volume $703 below minimum $1,000"
+    }
+  },
+  {
+    "timestamp": "2025-09-24T16:45:02.239662",
+    "session_id": "20250924_164502",
+    "event_type": "signal",
+    "event_subtype": "volume_filter_blocked",
+    "data": {
+      "signal_type": "volume_filter_blocked",
+      "symbol": "BTCUSDT",
+      "current_volume": 702.53649,
+      "minimum_required": 1000,
+      "reason": "Volume $703 below minimum $1,000"
+    }
+  },
+  {
+    "timestamp": "2025-09-24T16:45:07.379237",
+    "session_id": "20250924_164507",
+    "event_type": "signal",
+    "event_subtype": "volume_filter_blocked",
+    "data": {
+      "signal_type": "volume_filter_blocked",
+      "symbol": "BTCUSDT",
+      "current_volume": 702.53649,
+      "minimum_required": 1000,
+      "reason": "Volume $703 below minimum $1,000"
+    }
+  },
+  {
+    "timestamp": "2025-09-24T16:45:07.494193",
+    "session_id": "20250924_164507",
+    "event_type": "signal",
+    "event_subtype": "volume_filter_blocked",
+    "data": {
+      "signal_type": "volume_filter_blocked",
+      "symbol": "BTCUSDT",
+      "current_volume": 702.53649,
+      "minimum_required": 1000,
+      "reason": "Volume $703 below minimum $1,000"
+    }
+  },
+  {
+    "timestamp": "2025-09-24T16:45:12.623040",
+    "session_id": "20250924_164512",
+    "event_type": "signal",
+    "event_subtype": "volume_filter_blocked",
+    "data": {
+      "signal_type": "volume_filter_blocked",
+      "symbol": "BTCUSDT",
+      "current_volume": 702.53649,
+      "minimum_required": 1000,
+      "reason": "Volume $703 below minimum $1,000"
+    }
+  },
+  {
+    "timestamp": "2025-09-24T16:45:12.735174",
+    "session_id": "20250924_164512",
+    "event_type": "signal",
+    "event_subtype": "volume_filter_blocked",
+    "data": {
+      "signal_type": "volume_filter_blocked",
+      "symbol": "BTCUSDT",
+      "current_volume": 702.53649,
+      "minimum_required": 1000,
+      "reason": "Volume $703 below minimum $1,000"
+    }
+  },
+  {
+    "timestamp": "2025-09-24T16:45:36.379938",
+    "session_id": "20250924_164536",
+    "event_type": "signal",
+    "event_subtype": "fee_calculator_initialized",
+    "data": {
+      "signal_type": "fee_calculator_initialized",
+      "maker_fee_pct": 0.1,
+      "taker_fee_pct": 0.1,
+      "use_fee_discount": false,
+      "fee_discount_pct": 0.0,
+      "include_fees_in_calculation": true
+    }
+  },
+  {
+    "timestamp": "2025-09-24T16:45:36.381948",
+    "session_id": "20250924_164536",
+    "event_type": "signal",
+    "event_subtype": "capital_initialized",
+    "data": {
+      "signal_type": "capital_initialized",
+      "total_capital": 20000.0,
+      "capital_per_grid": 2000.0,
+      "allocation_pct": 10.0
+    }
+  },
+  {
+    "timestamp": "2025-09-24T16:45:36.502508",
+    "session_id": "20250924_164536",
+    "event_type": "signal",
+    "event_subtype": "volatility_adjustment",
+    "data": {
+      "signal_type": "volatility_adjustment",
+      "volatility_ratio": 0.00999999999999982,
+      "regime": "very_low",
+      "original_spacing_pct": 0.5,
+      "adjusted_spacing_pct": 0.35,
+      "spacing_multiplier": 0.7,
+      "position_multiplier": 1.1,
+      "atr_value": 1127.3999999999796,
+      "current_price": 112740.0
+    }
+  },
+  {
+    "timestamp": "2025-09-24T16:45:36.503674",
+    "session_id": "20250924_164536",
+    "event_type": "signal",
+    "event_subtype": "grid_generated",
+    "data": {
+      "signal_type": "grid_generated",
+      "center_price": 112740.0,
+      "total_levels": 10,
+      "price_range": "110767.05 - 114712.95",
+      "spacing_pct": 0.35
+    }
+  }
+]

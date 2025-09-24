@@ -97,11 +97,8 @@ def main():
         # Display testnet balance
         usdt_balance = next((float(asset['free']) for asset in account_info['balances'] 
                            if asset['asset'] == 'USDT'), 0.0)
-        bnb_balance = next((float(asset['free']) for asset in account_info['balances'] 
-                          if asset['asset'] == 'BNB'), 0.0)
         
         print(f"🧪 Testnet USDT Balance: ${usdt_balance:,.2f}")
-        print(f"🧪 Testnet BNB Balance: {bnb_balance:.4f}")
         
         if usdt_balance < 100:
             print("💡 TIP: Get testnet USDT from the faucet:")
@@ -202,7 +199,7 @@ def main():
         print("✅ Win rate and profit factor calculation")
         print("✅ Maximum consecutive loss monitoring")
         print("✅ Drawdown analysis and alerts")
-        print("✅ Fee savings from BNB optimization")
+        print("✅ Fee optimization settings configured")
         print("✅ Daily/Monthly performance reports")
         
         # Get performance summary

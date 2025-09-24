@@ -4,3 +4,6 @@ __pycache__/
 *.pyc
 secrets.json
 src/config/config.yaml
+note.txt
+.DS_Store
+ tempplate.py
