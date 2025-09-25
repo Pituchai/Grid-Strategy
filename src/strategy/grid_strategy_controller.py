@@ -470,25 +470,39 @@ class GridStrategyController:
                                 
                                 if buy_opportunities:
                                     print(f"   🟢 BUY Opportunities: {', '.join(buy_opportunities)}")
-                                    # Check technical indicators for BUY signals
-                                    buy_allowed, buy_reason = self.technical_indicators.should_allow_trading_by_indicators(current_price, 'BUY')
-                                    if buy_allowed:
-                                        executed_buys = self.order_executor.execute_buy_orders(self.grid_levels, current_price)
-                                        for executed in executed_buys:
-                                            self.print_trade_update(executed['level'], 'BUY', current_price)
-                                    else:
-                                        print(f"   📈 TECHNICAL INDICATORS: {buy_reason}")
+                                    try:
+                                        # Check technical indicators for BUY signals
+                                        buy_allowed, buy_reason = self.technical_indicators.should_allow_trading_by_indicators(current_price, 'BUY')
+                                        if buy_allowed:
+                                            executed_buys = self.order_executor.execute_buy_orders(self.grid_levels, current_price)
+                                            for executed in executed_buys:
+                                                self.print_trade_update(executed['level'], 'BUY', current_price)
+                                        else:
+                                            print(f"   📈 TECHNICAL INDICATORS: {buy_reason}")
+                                    except Exception as e:
+                                        self.logger.log_error(f"Buy execution failed: {e}", {
+                                            "current_price": current_price,
+                                            "opportunities": len(buy_opportunities)
+                                        })
+                                        print(f"   ❌ BUY execution error: {e}")
                                 
                                 if sell_opportunities:
                                     print(f"   🔴 SELL Opportunities: {', '.join(sell_opportunities)}")
-                                    # Check technical indicators for SELL signals
-                                    sell_allowed, sell_reason = self.technical_indicators.should_allow_trading_by_indicators(current_price, 'SELL')
-                                    if sell_allowed:
-                                        executed_sells = self.order_executor.execute_sell_orders(self.grid_levels, current_price, self.cycle_tracker)
-                                        for executed in executed_sells:
-                                            self.print_trade_update(executed['level'], 'SELL', current_price)
-                                    else:
-                                        print(f"   📈 TECHNICAL INDICATORS: {sell_reason}")
+                                    try:
+                                        # Check technical indicators for SELL signals
+                                        sell_allowed, sell_reason = self.technical_indicators.should_allow_trading_by_indicators(current_price, 'SELL')
+                                        if sell_allowed:
+                                            executed_sells = self.order_executor.execute_sell_orders(self.grid_levels, current_price, self.cycle_tracker)
+                                            for executed in executed_sells:
+                                                self.print_trade_update(executed['level'], 'SELL', current_price)
+                                        else:
+                                            print(f"   📈 TECHNICAL INDICATORS: {sell_reason}")
+                                    except Exception as e:
+                                        self.logger.log_error(f"Sell execution failed: {e}", {
+                                            "current_price": current_price,
+                                            "opportunities": len(sell_opportunities)
+                                        })
+                                        print(f"   ❌ SELL execution error: {e}")
                     else:
                         # ⚠️ CRITICAL: Check risk manager before any trades (non-volatility path)
                         trade_allowed, risk_reason = self.risk.check_trade_allowed()
@@ -505,25 +519,39 @@ class GridStrategyController:
                             
                             if buy_opportunities:
                                 print(f"   🟢 BUY Opportunities: {', '.join(buy_opportunities)}")
-                                # Check technical indicators for BUY signals
-                                buy_allowed, buy_reason = self.technical_indicators.should_allow_trading_by_indicators(current_price, 'BUY')
-                                if buy_allowed:
-                                    executed_buys = self.order_executor.execute_buy_orders(self.grid_levels, current_price)
-                                    for executed in executed_buys:
-                                        self.print_trade_update(executed['level'], 'BUY', current_price)
-                                else:
-                                    print(f"   📈 TECHNICAL INDICATORS: {buy_reason}")
+                                try:
+                                    # Check technical indicators for BUY signals
+                                    buy_allowed, buy_reason = self.technical_indicators.should_allow_trading_by_indicators(current_price, 'BUY')
+                                    if buy_allowed:
+                                        executed_buys = self.order_executor.execute_buy_orders(self.grid_levels, current_price)
+                                        for executed in executed_buys:
+                                            self.print_trade_update(executed['level'], 'BUY', current_price)
+                                    else:
+                                        print(f"   📈 TECHNICAL INDICATORS: {buy_reason}")
+                                except Exception as e:
+                                    self.logger.log_error(f"Buy execution failed: {e}", {
+                                        "current_price": current_price,
+                                        "opportunities": len(buy_opportunities)
+                                    })
+                                    print(f"   ❌ BUY execution error: {e}")
                             
                             if sell_opportunities:
                                 print(f"   🔴 SELL Opportunities: {', '.join(sell_opportunities)}")
-                                # Check technical indicators for SELL signals
-                                sell_allowed, sell_reason = self.technical_indicators.should_allow_trading_by_indicators(current_price, 'SELL')
-                                if sell_allowed:
-                                    executed_sells = self.order_executor.execute_sell_orders(self.grid_levels, current_price, self.cycle_tracker)
-                                    for executed in executed_sells:
-                                        self.print_trade_update(executed['level'], 'SELL', current_price)
-                                else:
-                                    print(f"   📈 TECHNICAL INDICATORS: {sell_reason}")
+                                try:
+                                    # Check technical indicators for SELL signals
+                                    sell_allowed, sell_reason = self.technical_indicators.should_allow_trading_by_indicators(current_price, 'SELL')
+                                    if sell_allowed:
+                                        executed_sells = self.order_executor.execute_sell_orders(self.grid_levels, current_price, self.cycle_tracker)
+                                        for executed in executed_sells:
+                                            self.print_trade_update(executed['level'], 'SELL', current_price)
+                                    else:
+                                        print(f"   📈 TECHNICAL INDICATORS: {sell_reason}")
+                                except Exception as e:
+                                    self.logger.log_error(f"Sell execution failed: {e}", {
+                                        "current_price": current_price,
+                                        "opportunities": len(sell_opportunities)
+                                    })
+                                    print(f"   ❌ SELL execution error: {e}")
                     
                     if not buy_opportunities and not sell_opportunities:
                         print(f"   ⏳ No entry signals - Price ${current_price:,.2f} between grid levels")

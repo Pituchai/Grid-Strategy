@@ -13,13 +13,16 @@ class EventLogger:
     """
     
     def _convert_for_json(self, value):
-        """Convert numpy/pandas types to JSON serializable types"""
+        """Convert numpy/pandas types and datetime to JSON serializable types"""
         import numpy as np
+        from datetime import datetime
         
         if isinstance(value, dict):
             return {k: self._convert_for_json(v) for k, v in value.items()}
         elif isinstance(value, list):
             return [self._convert_for_json(v) for v in value]
+        elif isinstance(value, datetime):
+            return value.isoformat()
         elif isinstance(value, np.integer):
             return int(value)
         elif isinstance(value, np.floating):

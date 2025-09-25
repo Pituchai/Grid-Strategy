@@ -1,0 +1,1788 @@
+[
+  {
+    "timestamp": "2025-09-25T17:45:35.693330",
+    "session_id": "20250925_174535",
+    "event_type": "signal",
+    "event_subtype": "csv_trade_file_initialized",
+    "data": {
+      "signal_type": "csv_trade_file_initialized",
+      "file_path": "logs/trade_history.csv",
+      "headers": [
+        "timestamp",
+        "trade_id",
+        "symbol",
+        "side",
+        "quantity",
+        "price",
+        "grid_level",
+        "order_id",
+        "pnl",
+        "fees",
+        "trade_type",
+        "notes"
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-09-25T17:46:16.855277",
+    "session_id": "20250925_174616",
+    "event_type": "signal",
+    "event_subtype": "fee_calculator_initialized",
+    "data": {
+      "signal_type": "fee_calculator_initialized",
+      "maker_fee_pct": 0.1,
+      "taker_fee_pct": 0.1,
+      "use_fee_discount": false,
+      "fee_discount_pct": 0.0,
+      "include_fees_in_calculation": true
+    }
+  },
+  {
+    "timestamp": "2025-09-25T17:46:16.856964",
+    "session_id": "20250925_174616",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.9416681633121118,
+      "price": 10619.4521484375,
+      "timestamp": "2025-09-25T17:46:16.856956"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T17:46:16.857558",
+    "session_id": "20250925_174616",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.9414193175532914,
+      "price": 10575.974609375,
+      "timestamp": "2025-09-25T17:46:16.857555"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T17:46:16.857946",
+    "session_id": "20250925_174616",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.9401726059112356,
+      "price": 10549.3291015625,
+      "timestamp": "2025-09-25T17:46:16.857943"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T17:46:16.858559",
+    "session_id": "20250925_174616",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "sell",
+      "qty": 0.0001,
+      "price": 10915.685546875,
+      "timestamp": "2025-09-25T17:46:16.858556",
+      "pnl": 0.03340826789088642
+    }
+  },
+  {
+    "timestamp": "2025-09-25T17:46:16.861076",
+    "session_id": "20250925_174616",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.7682326364280964,
+      "price": 13271.28515625,
+      "timestamp": "2025-09-25T17:46:16.861073"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T17:46:16.861650",
+    "session_id": "20250925_174616",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "sell",
+      "qty": 0.0001,
+      "price": 13780.9951171875,
+      "timestamp": "2025-09-25T17:46:16.861648",
+      "pnl": 0.2624043944333551
+    }
+  },
+  {
+    "timestamp": "2025-09-25T17:46:16.862447",
+    "session_id": "20250925_174616",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.7035816050269115,
+      "price": 14833.75390625,
+      "timestamp": "2025-09-25T17:46:16.862445"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T17:46:16.863051",
+    "session_id": "20250925_174616",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "sell",
+      "qty": 0.0001,
+      "price": 15701.33984375,
+      "timestamp": "2025-09-25T17:46:16.863049",
+      "pnl": 0.39420588770938525
+    }
+  },
+  {
+    "timestamp": "2025-09-25T17:46:47.620582",
+    "session_id": "20250925_174647",
+    "event_type": "signal",
+    "event_subtype": "fee_calculator_initialized",
+    "data": {
+      "signal_type": "fee_calculator_initialized",
+      "maker_fee_pct": 0.1,
+      "taker_fee_pct": 0.1,
+      "use_fee_discount": false,
+      "fee_discount_pct": 0.0,
+      "include_fees_in_calculation": true
+    }
+  },
+  {
+    "timestamp": "2025-09-25T17:46:47.623424",
+    "session_id": "20250925_174647",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.9416681633121118,
+      "price": 10619.4521484375,
+      "timestamp": "2025-09-25T17:46:47.623419"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T17:46:47.624217",
+    "session_id": "20250925_174647",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.9414193175532914,
+      "price": 10575.974609375,
+      "timestamp": "2025-09-25T17:46:47.624214"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T17:46:47.624933",
+    "session_id": "20250925_174647",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.9401726059112356,
+      "price": 10549.3291015625,
+      "timestamp": "2025-09-25T17:46:47.624930"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T17:46:47.625954",
+    "session_id": "20250925_174647",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "sell",
+      "qty": 0.0001,
+      "price": 10915.685546875,
+      "timestamp": "2025-09-25T17:46:47.625951",
+      "pnl": 0.03340826789088642
+    }
+  },
+  {
+    "timestamp": "2025-09-25T17:46:47.629523",
+    "session_id": "20250925_174647",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.7682326364280964,
+      "price": 13271.28515625,
+      "timestamp": "2025-09-25T17:46:47.629519"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T17:46:47.630555",
+    "session_id": "20250925_174647",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "sell",
+      "qty": 0.0001,
+      "price": 13780.9951171875,
+      "timestamp": "2025-09-25T17:46:47.630552",
+      "pnl": 0.2624043944333551
+    }
+  },
+  {
+    "timestamp": "2025-09-25T17:46:47.631835",
+    "session_id": "20250925_174647",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.7035816050269115,
+      "price": 14833.75390625,
+      "timestamp": "2025-09-25T17:46:47.631832"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T17:46:47.632757",
+    "session_id": "20250925_174647",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "sell",
+      "qty": 0.0001,
+      "price": 15701.33984375,
+      "timestamp": "2025-09-25T17:46:47.632755",
+      "pnl": 0.39420588770938525
+    }
+  },
+  {
+    "timestamp": "2025-09-25T17:52:34.061216",
+    "session_id": "20250925_175234",
+    "event_type": "signal",
+    "event_subtype": "fee_calculator_initialized",
+    "data": {
+      "signal_type": "fee_calculator_initialized",
+      "maker_fee_pct": 0.1,
+      "taker_fee_pct": 0.1,
+      "use_fee_discount": false,
+      "fee_discount_pct": 0.0,
+      "include_fees_in_calculation": true
+    }
+  },
+  {
+    "timestamp": "2025-09-25T17:52:34.065045",
+    "session_id": "20250925_175234",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.9416681633121118,
+      "price": 10619.4521484375,
+      "timestamp": "2025-09-25T17:52:34.065037"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T17:52:34.066064",
+    "session_id": "20250925_175234",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.9414193175532914,
+      "price": 10575.974609375,
+      "timestamp": "2025-09-25T17:52:34.066060"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T17:52:34.066897",
+    "session_id": "20250925_175234",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.9401726059112356,
+      "price": 10549.3291015625,
+      "timestamp": "2025-09-25T17:52:34.066894"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T17:52:34.068442",
+    "session_id": "20250925_175234",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "sell",
+      "qty": 0.0001,
+      "price": 10915.685546875,
+      "timestamp": "2025-09-25T17:52:34.068437",
+      "pnl": 0.03340826789088642
+    }
+  },
+  {
+    "timestamp": "2025-09-25T17:52:34.072413",
+    "session_id": "20250925_175234",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.7682326364280964,
+      "price": 13271.28515625,
+      "timestamp": "2025-09-25T17:52:34.072409"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T17:52:34.073597",
+    "session_id": "20250925_175234",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "sell",
+      "qty": 0.0001,
+      "price": 13780.9951171875,
+      "timestamp": "2025-09-25T17:52:34.073594",
+      "pnl": 0.2624043944333551
+    }
+  },
+  {
+    "timestamp": "2025-09-25T17:52:34.074977",
+    "session_id": "20250925_175234",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.7035816050269115,
+      "price": 14833.75390625,
+      "timestamp": "2025-09-25T17:52:34.074974"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T17:52:34.076037",
+    "session_id": "20250925_175234",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "sell",
+      "qty": 0.0001,
+      "price": 15701.33984375,
+      "timestamp": "2025-09-25T17:52:34.076035",
+      "pnl": 0.39420588770938525
+    }
+  },
+  {
+    "timestamp": "2025-09-25T17:55:41.106581",
+    "session_id": "20250925_175541",
+    "event_type": "signal",
+    "event_subtype": "fee_calculator_initialized",
+    "data": {
+      "signal_type": "fee_calculator_initialized",
+      "maker_fee_pct": 0.1,
+      "taker_fee_pct": 0.1,
+      "use_fee_discount": false,
+      "fee_discount_pct": 0.0,
+      "include_fees_in_calculation": true
+    }
+  },
+  {
+    "timestamp": "2025-09-25T17:55:41.115654",
+    "session_id": "20250925_175541",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.0842124931207275,
+      "price": 118747.2265625,
+      "timestamp": "2025-09-25T17:55:41.115643"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T17:55:41.120548",
+    "session_id": "20250925_175541",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.08459269049100836,
+      "price": 118213.5234375,
+      "timestamp": "2025-09-25T17:55:41.120543"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T17:55:41.123698",
+    "session_id": "20250925_175541",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.0850175385204172,
+      "price": 117622.7890625,
+      "timestamp": "2025-09-25T17:55:41.123695"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T17:55:41.153942",
+    "session_id": "20250925_175541",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.08545870695368152,
+      "price": 117015.578125,
+      "timestamp": "2025-09-25T17:55:41.153934"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T17:55:41.155054",
+    "session_id": "20250925_175541",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.0860454049501787,
+      "price": 116217.7109375,
+      "timestamp": "2025-09-25T17:55:41.155052"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T17:58:58.173912",
+    "session_id": "20250925_175858",
+    "event_type": "signal",
+    "event_subtype": "fee_calculator_initialized",
+    "data": {
+      "signal_type": "fee_calculator_initialized",
+      "maker_fee_pct": 0.1,
+      "taker_fee_pct": 0.1,
+      "use_fee_discount": false,
+      "fee_discount_pct": 0.0,
+      "include_fees_in_calculation": true
+    }
+  },
+  {
+    "timestamp": "2025-09-25T17:58:58.177402",
+    "session_id": "20250925_175858",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.09392322377564973,
+      "price": 106469.94,
+      "timestamp": "2025-09-25T17:58:58.177397"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T17:58:58.232177",
+    "session_id": "20250925_175858",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.09449185258174893,
+      "price": 105829.23,
+      "timestamp": "2025-09-25T17:58:58.232168"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T17:58:58.236030",
+    "session_id": "20250925_175858",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.09487798359237079,
+      "price": 105398.53,
+      "timestamp": "2025-09-25T17:58:58.236026"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T17:58:58.570894",
+    "session_id": "20250925_175858",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.08627059548709888,
+      "price": 115914.35,
+      "timestamp": "2025-09-25T17:58:58.570882"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T17:58:58.572354",
+    "session_id": "20250925_175858",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.08671401656636601,
+      "price": 115321.61,
+      "timestamp": "2025-09-25T17:58:58.572352"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:01:00.517594",
+    "session_id": "20250925_180100",
+    "event_type": "signal",
+    "event_subtype": "fee_calculator_initialized",
+    "data": {
+      "signal_type": "fee_calculator_initialized",
+      "maker_fee_pct": 0.1,
+      "taker_fee_pct": 0.1,
+      "use_fee_discount": false,
+      "fee_discount_pct": 0.0,
+      "include_fees_in_calculation": true
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:01:00.528285",
+    "session_id": "20250925_180100",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.09140098608867853,
+      "price": 109408.01,
+      "timestamp": "2025-09-25T18:01:00.528280"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:01:00.730969",
+    "session_id": "20250925_180100",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.09180039766096258,
+      "price": 108931.99,
+      "timestamp": "2025-09-25T18:01:00.730961"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:01:00.732783",
+    "session_id": "20250925_180100",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.09226763112176126,
+      "price": 108380.37,
+      "timestamp": "2025-09-25T18:01:00.732780"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:01:00.749230",
+    "session_id": "20250925_180100",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.0928402008467769,
+      "price": 107711.96,
+      "timestamp": "2025-09-25T18:01:00.749222"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:01:00.898266",
+    "session_id": "20250925_180100",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.09313316160820108,
+      "price": 107373.14,
+      "timestamp": "2025-09-25T18:01:00.898256"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:03:12.570199",
+    "session_id": "20250925_180312",
+    "event_type": "signal",
+    "event_subtype": "fee_calculator_initialized",
+    "data": {
+      "signal_type": "fee_calculator_initialized",
+      "maker_fee_pct": 0.1,
+      "taker_fee_pct": 0.1,
+      "use_fee_discount": false,
+      "fee_discount_pct": 0.0,
+      "include_fees_in_calculation": true
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:03:12.579969",
+    "session_id": "20250925_180312",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.9140098608867852,
+      "price": 109408.01,
+      "timestamp": "2025-09-25T18:03:12.579965"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:03:12.594253",
+    "session_id": "20250925_180312",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "sell",
+      "qty": 0.0001,
+      "price": 110691.29,
+      "timestamp": "2025-09-25T18:03:12.594249",
+      "pnl": 0.1283279999999999
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:03:12.807685",
+    "session_id": "20250925_180312",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.925811936126385,
+      "price": 108931.99,
+      "timestamp": "2025-09-25T18:03:12.807671"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:03:12.809854",
+    "session_id": "20250925_180312",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.9256482052607867,
+      "price": 108380.37,
+      "timestamp": "2025-09-25T18:03:12.809851"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:03:12.829051",
+    "session_id": "20250925_180312",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.9248179903513036,
+      "price": 107711.96,
+      "timestamp": "2025-09-25T18:03:12.829044"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:03:13.008818",
+    "session_id": "20250925_180313",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.9236068092262181,
+      "price": 107373.14,
+      "timestamp": "2025-09-25T18:03:13.008809"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:03:13.113563",
+    "session_id": "20250925_180313",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "sell",
+      "qty": 0.0001,
+      "price": 111244.01,
+      "timestamp": "2025-09-25T18:03:13.113550",
+      "pnl": 0.2885005356279042
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:07:30.000043",
+    "session_id": "20250925_180730",
+    "event_type": "signal",
+    "event_subtype": "fee_calculator_initialized",
+    "data": {
+      "signal_type": "fee_calculator_initialized",
+      "maker_fee_pct": 0.1,
+      "taker_fee_pct": 0.1,
+      "use_fee_discount": false,
+      "fee_discount_pct": 0.0,
+      "include_fees_in_calculation": true
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:07:30.008821",
+    "session_id": "20250925_180730",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.9140098608867852,
+      "price": 109408.01,
+      "timestamp": "2025-09-25T18:07:30.008816"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:07:30.024268",
+    "session_id": "20250925_180730",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "sell",
+      "qty": 0.9118973822782264,
+      "price": 110691.29,
+      "timestamp": "2025-09-25T18:07:30.024261",
+      "pnl": 1170.2196727300013
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:07:30.208000",
+    "session_id": "20250925_180730",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.9379192975727332,
+      "price": 108931.99,
+      "timestamp": "2025-09-25T18:07:30.207992"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:07:30.209994",
+    "session_id": "20250925_180730",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.9370131174123137,
+      "price": 108380.37,
+      "timestamp": "2025-09-25T18:07:30.209991"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:07:30.227302",
+    "session_id": "20250925_180730",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.9362534278273278,
+      "price": 107711.96,
+      "timestamp": "2025-09-25T18:07:30.227296"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:07:30.498112",
+    "session_id": "20250925_180730",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.935078331657247,
+      "price": 107373.14,
+      "timestamp": "2025-09-25T18:07:30.498055"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:07:30.603027",
+    "session_id": "20250925_180730",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "sell",
+      "qty": 0.9288337915183029,
+      "price": 111244.01,
+      "timestamp": "2025-09-25T18:07:30.603017",
+      "pnl": 2919.5594406602913
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:12:29.437636",
+    "session_id": "20250925_181229",
+    "event_type": "signal",
+    "event_subtype": "fee_calculator_initialized",
+    "data": {
+      "signal_type": "fee_calculator_initialized",
+      "maker_fee_pct": 0.1,
+      "taker_fee_pct": 0.1,
+      "use_fee_discount": false,
+      "fee_discount_pct": 0.0,
+      "include_fees_in_calculation": true
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:12:29.446782",
+    "session_id": "20250925_181229",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.027420295826603557,
+      "price": 109408.01,
+      "timestamp": "2025-09-25T18:12:29.446774"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:12:29.711772",
+    "session_id": "20250925_181229",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.027540119298288774,
+      "price": 108931.99,
+      "timestamp": "2025-09-25T18:12:29.711761"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:12:29.714285",
+    "session_id": "20250925_181229",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.02768028933652838,
+      "price": 108380.37,
+      "timestamp": "2025-09-25T18:12:29.714281"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:12:29.733590",
+    "session_id": "20250925_181229",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.02785206025403307,
+      "price": 107711.96,
+      "timestamp": "2025-09-25T18:12:29.733581"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:12:29.923311",
+    "session_id": "20250925_181229",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.027965227663054055,
+      "price": 107276.08,
+      "timestamp": "2025-09-25T18:12:29.923293"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:13:17.061330",
+    "session_id": "20250925_181317",
+    "event_type": "signal",
+    "event_subtype": "fee_calculator_initialized",
+    "data": {
+      "signal_type": "fee_calculator_initialized",
+      "maker_fee_pct": 0.1,
+      "taker_fee_pct": 0.1,
+      "use_fee_discount": false,
+      "fee_discount_pct": 0.0,
+      "include_fees_in_calculation": true
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:13:17.069868",
+    "session_id": "20250925_181317",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.09048697622779174,
+      "price": 109408.01,
+      "timestamp": "2025-09-25T18:13:17.069863"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:13:17.284699",
+    "session_id": "20250925_181317",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.09105793593365978,
+      "price": 108721.99,
+      "timestamp": "2025-09-25T18:13:17.284690"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:13:17.287425",
+    "session_id": "20250925_181317",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.09137784498920819,
+      "price": 108341.36,
+      "timestamp": "2025-09-25T18:13:17.287422"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:13:17.304496",
+    "session_id": "20250925_181317",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.09191179883830913,
+      "price": 107711.96,
+      "timestamp": "2025-09-25T18:13:17.304489"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:13:18.816807",
+    "session_id": "20250925_181318",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.08834126426700263,
+      "price": 112065.41,
+      "timestamp": "2025-09-25T18:13:18.816790"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:13:39.966001",
+    "session_id": "20250925_181339",
+    "event_type": "signal",
+    "event_subtype": "fee_calculator_initialized",
+    "data": {
+      "signal_type": "fee_calculator_initialized",
+      "maker_fee_pct": 0.1,
+      "taker_fee_pct": 0.1,
+      "use_fee_discount": false,
+      "fee_discount_pct": 0.0,
+      "include_fees_in_calculation": true
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:13:39.975087",
+    "session_id": "20250925_181339",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.09048697622779174,
+      "price": 109408.01,
+      "timestamp": "2025-09-25T18:13:39.975081"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:13:40.182868",
+    "session_id": "20250925_181340",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.09105793593365978,
+      "price": 108721.99,
+      "timestamp": "2025-09-25T18:13:40.182860"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:13:40.185100",
+    "session_id": "20250925_181340",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.09137784498920819,
+      "price": 108341.36,
+      "timestamp": "2025-09-25T18:13:40.185098"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:13:40.201585",
+    "session_id": "20250925_181340",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.09191179883830913,
+      "price": 107711.96,
+      "timestamp": "2025-09-25T18:13:40.201577"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:13:41.840570",
+    "session_id": "20250925_181341",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.08834126426700263,
+      "price": 112065.41,
+      "timestamp": "2025-09-25T18:13:41.840497"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:14:03.058092",
+    "session_id": "20250925_181403",
+    "event_type": "signal",
+    "event_subtype": "fee_calculator_initialized",
+    "data": {
+      "signal_type": "fee_calculator_initialized",
+      "maker_fee_pct": 0.1,
+      "taker_fee_pct": 0.1,
+      "use_fee_discount": false,
+      "fee_discount_pct": 0.0,
+      "include_fees_in_calculation": true
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:14:03.067725",
+    "session_id": "20250925_181403",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.09048697622779174,
+      "price": 109408.01,
+      "timestamp": "2025-09-25T18:14:03.067717"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:14:03.276905",
+    "session_id": "20250925_181403",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.09105793593365978,
+      "price": 108721.99,
+      "timestamp": "2025-09-25T18:14:03.276895"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:14:03.279158",
+    "session_id": "20250925_181403",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.09137784498920819,
+      "price": 108341.36,
+      "timestamp": "2025-09-25T18:14:03.279155"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:14:03.295641",
+    "session_id": "20250925_181403",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.09191179883830913,
+      "price": 107711.96,
+      "timestamp": "2025-09-25T18:14:03.295635"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:14:04.821994",
+    "session_id": "20250925_181404",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.08834126426700263,
+      "price": 112065.41,
+      "timestamp": "2025-09-25T18:14:04.821986"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:16:18.292749",
+    "session_id": "20250925_181618",
+    "event_type": "signal",
+    "event_subtype": "fee_calculator_initialized",
+    "data": {
+      "signal_type": "fee_calculator_initialized",
+      "maker_fee_pct": 0.1,
+      "taker_fee_pct": 0.1,
+      "use_fee_discount": false,
+      "fee_discount_pct": 0.0,
+      "include_fees_in_calculation": true
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:16:18.496892",
+    "session_id": "20250925_181618",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.009064891437395113,
+      "price": 109212.56,
+      "timestamp": "2025-09-25T18:16:18.496883"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:16:18.500417",
+    "session_id": "20250925_181618",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.009105793593365979,
+      "price": 108721.99,
+      "timestamp": "2025-09-25T18:16:18.500414"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:16:18.504207",
+    "session_id": "20250925_181618",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.0091568510310753,
+      "price": 108115.77,
+      "timestamp": "2025-09-25T18:16:18.504204"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:16:18.521721",
+    "session_id": "20250925_181618",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.009194425317769555,
+      "price": 107673.94,
+      "timestamp": "2025-09-25T18:16:18.521714"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:16:20.165654",
+    "session_id": "20250925_181620",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.008834126426700263,
+      "price": 112065.41,
+      "timestamp": "2025-09-25T18:16:20.165607"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:19:00.589116",
+    "session_id": "20250925_181900",
+    "event_type": "signal",
+    "event_subtype": "fee_calculator_initialized",
+    "data": {
+      "signal_type": "fee_calculator_initialized",
+      "maker_fee_pct": 0.1,
+      "taker_fee_pct": 0.1,
+      "use_fee_discount": false,
+      "fee_discount_pct": 0.0,
+      "include_fees_in_calculation": true
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:19:00.672263",
+    "session_id": "20250925_181900",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.008419146261150692,
+      "price": 117589.12,
+      "timestamp": "2025-09-25T18:19:00.672254"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:19:00.804637",
+    "session_id": "20250925_181900",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.008461393099144194,
+      "price": 117002.01,
+      "timestamp": "2025-09-25T18:19:00.804625"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:19:00.806923",
+    "session_id": "20250925_181900",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.008507605326517165,
+      "price": 116366.47,
+      "timestamp": "2025-09-25T18:19:00.806920"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:19:00.888378",
+    "session_id": "20250925_181900",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.008547805545194579,
+      "price": 115819.2,
+      "timestamp": "2025-09-25T18:19:00.888370"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:19:00.894487",
+    "session_id": "20250925_181900",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.008612073082574122,
+      "price": 114954.9,
+      "timestamp": "2025-09-25T18:19:00.894480"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:21:36.459534",
+    "session_id": "20250925_182136",
+    "event_type": "signal",
+    "event_subtype": "fee_calculator_initialized",
+    "data": {
+      "signal_type": "fee_calculator_initialized",
+      "maker_fee_pct": 0.1,
+      "taker_fee_pct": 0.1,
+      "use_fee_discount": false,
+      "fee_discount_pct": 0.0,
+      "include_fees_in_calculation": true
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:21:36.543846",
+    "session_id": "20250925_182136",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.012755102040816327,
+      "price": 117600.0,
+      "timestamp": "2025-09-25T18:21:36.543835"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:21:36.675437",
+    "session_id": "20250925_182136",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.012820292574460901,
+      "price": 117002.01,
+      "timestamp": "2025-09-25T18:21:36.675429"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:21:36.677591",
+    "session_id": "20250925_182136",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.012890311100783584,
+      "price": 116366.47,
+      "timestamp": "2025-09-25T18:21:36.677588"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:21:36.753990",
+    "session_id": "20250925_182136",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.01295122052302209,
+      "price": 115819.2,
+      "timestamp": "2025-09-25T18:21:36.753981"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:21:36.759234",
+    "session_id": "20250925_182136",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.013048595579657762,
+      "price": 114954.9,
+      "timestamp": "2025-09-25T18:21:36.759230"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:41:34.601578",
+    "session_id": "20250925_184134",
+    "event_type": "signal",
+    "event_subtype": "fee_calculator_initialized",
+    "data": {
+      "signal_type": "fee_calculator_initialized",
+      "maker_fee_pct": 0.1,
+      "taker_fee_pct": 0.1,
+      "use_fee_discount": false,
+      "fee_discount_pct": 0.0,
+      "include_fees_in_calculation": true
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:41:34.684745",
+    "session_id": "20250925_184134",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.012764761361509872,
+      "price": 117511.01,
+      "timestamp": "2025-09-25T18:41:34.684737"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:41:34.816603",
+    "session_id": "20250925_184134",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.012830460265390373,
+      "price": 116909.29,
+      "timestamp": "2025-09-25T18:41:34.816594"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:41:34.818800",
+    "session_id": "20250925_184134",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.012890311100783584,
+      "price": 116366.47,
+      "timestamp": "2025-09-25T18:41:34.818797"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:41:34.896546",
+    "session_id": "20250925_184134",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.012974505788100025,
+      "price": 115611.34,
+      "timestamp": "2025-09-25T18:41:34.896538"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:41:34.901421",
+    "session_id": "20250925_184134",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.013048595579657762,
+      "price": 114954.9,
+      "timestamp": "2025-09-25T18:41:34.901419"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:43:51.136770",
+    "session_id": "20250925_184351",
+    "event_type": "signal",
+    "event_subtype": "fee_calculator_initialized",
+    "data": {
+      "signal_type": "fee_calculator_initialized",
+      "maker_fee_pct": 0.1,
+      "taker_fee_pct": 0.1,
+      "use_fee_discount": false,
+      "fee_discount_pct": 0.0,
+      "include_fees_in_calculation": true
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:43:51.220506",
+    "session_id": "20250925_184351",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.005105904544603948,
+      "price": 117511.01,
+      "timestamp": "2025-09-25T18:43:51.220493"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:43:51.354126",
+    "session_id": "20250925_184351",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.0051321841061561495,
+      "price": 116909.29,
+      "timestamp": "2025-09-25T18:43:51.354112"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:43:51.356419",
+    "session_id": "20250925_184351",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.005159265227764792,
+      "price": 116295.63,
+      "timestamp": "2025-09-25T18:43:51.356416"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:43:51.434851",
+    "session_id": "20250925_184351",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.005189802315240011,
+      "price": 115611.34,
+      "timestamp": "2025-09-25T18:43:51.434845"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:43:51.439687",
+    "session_id": "20250925_184351",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.005219438231863105,
+      "price": 114954.9,
+      "timestamp": "2025-09-25T18:43:51.439685"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:46:17.022700",
+    "session_id": "20250925_184617",
+    "event_type": "signal",
+    "event_subtype": "fee_calculator_initialized",
+    "data": {
+      "signal_type": "fee_calculator_initialized",
+      "maker_fee_pct": 0.1,
+      "taker_fee_pct": 0.1,
+      "use_fee_discount": false,
+      "fee_discount_pct": 0.0,
+      "include_fees_in_calculation": true
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:46:17.107141",
+    "session_id": "20250925_184617",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.0012770304784607525,
+      "price": 117460.0,
+      "timestamp": "2025-09-25T18:46:17.107128"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:46:17.232585",
+    "session_id": "20250925_184617",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.001284066827973995,
+      "price": 116816.35,
+      "timestamp": "2025-09-25T18:46:17.232577"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:46:17.234734",
+    "session_id": "20250925_184617",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.001289816306941198,
+      "price": 116295.63,
+      "timestamp": "2025-09-25T18:46:17.234732"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:46:17.310779",
+    "session_id": "20250925_184617",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.0012974505788100027,
+      "price": 115611.34,
+      "timestamp": "2025-09-25T18:46:17.310771"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:46:17.315757",
+    "session_id": "20250925_184617",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.0013048595579657762,
+      "price": 114954.9,
+      "timestamp": "2025-09-25T18:46:17.315754"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:48:39.600174",
+    "session_id": "20250925_184839",
+    "event_type": "signal",
+    "event_subtype": "fee_calculator_initialized",
+    "data": {
+      "signal_type": "fee_calculator_initialized",
+      "maker_fee_pct": 0.1,
+      "taker_fee_pct": 0.1,
+      "use_fee_discount": false,
+      "fee_discount_pct": 0.0,
+      "include_fees_in_calculation": true
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:48:39.690041",
+    "session_id": "20250925_184839",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.001,
+      "price": 117460.0,
+      "timestamp": "2025-09-25T18:48:39.690027"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:48:39.828267",
+    "session_id": "20250925_184839",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.001,
+      "price": 116816.35,
+      "timestamp": "2025-09-25T18:48:39.828256"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:48:39.830898",
+    "session_id": "20250925_184839",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.001,
+      "price": 116137.45,
+      "timestamp": "2025-09-25T18:48:39.830894"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:48:39.909108",
+    "session_id": "20250925_184839",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.001,
+      "price": 115611.34,
+      "timestamp": "2025-09-25T18:48:39.909099"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:48:39.914627",
+    "session_id": "20250925_184839",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.001,
+      "price": 114954.9,
+      "timestamp": "2025-09-25T18:48:39.914618"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:51:01.009270",
+    "session_id": "20250925_185101",
+    "event_type": "signal",
+    "event_subtype": "fee_calculator_initialized",
+    "data": {
+      "signal_type": "fee_calculator_initialized",
+      "maker_fee_pct": 0.1,
+      "taker_fee_pct": 0.1,
+      "use_fee_discount": false,
+      "fee_discount_pct": 0.0,
+      "include_fees_in_calculation": true
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:51:01.095849",
+    "session_id": "20250925_185101",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.001,
+      "price": 117460.0,
+      "timestamp": "2025-09-25T18:51:01.095840"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:51:01.233261",
+    "session_id": "20250925_185101",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.001,
+      "price": 116816.35,
+      "timestamp": "2025-09-25T18:51:01.233253"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:51:01.235889",
+    "session_id": "20250925_185101",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.001,
+      "price": 116137.45,
+      "timestamp": "2025-09-25T18:51:01.235885"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:51:01.325771",
+    "session_id": "20250925_185101",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.001,
+      "price": 115611.34,
+      "timestamp": "2025-09-25T18:51:01.325763"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T18:51:01.331065",
+    "session_id": "20250925_185101",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.001,
+      "price": 114954.9,
+      "timestamp": "2025-09-25T18:51:01.331062"
+    }
+  }
+]

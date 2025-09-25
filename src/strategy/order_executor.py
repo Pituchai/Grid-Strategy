@@ -52,41 +52,34 @@ class OrderExecutor:
                 level['level'] not in self.bought_levels):
                 
                 try:
-                    # Check if testnet mode or simulation
+                    # Check if testnet mode - make real testnet API calls
                     api_cfg = self.cfg.get_api_config()
                     is_testnet = api_cfg.get('testnet', True)
                     
                     if is_testnet:
-                        # Simulate the buy order
                         print(f"🧪 [TESTNET BUY] Level {level['level']} @ ${level['price']:,.2f}")
-                        order_result = {
-                            'orderId': f"SIM_{level['level']}_{int(current_price)}",
-                            'status': 'FILLED',
-                            'executedQty': str(base_quantity),
-                            'fills': [{'price': str(level['price']), 'qty': str(base_quantity)}]
-                        }
                     else:
-                        # Real buy order using config settings
                         print(f"💰 [LIVE BUY] Level {level['level']} @ ${level['price']:,.2f}")
-                        
-                        # Use order settings from YAML config
-                        order_type = trading_cfg.get('order_type', 'LIMIT')
-                        time_in_force = trading_cfg.get('time_in_force', 'GTC')
-                        
-                        if order_type == 'MARKET':
-                            order_result = self.client.order_market_buy(
-                                symbol=symbol,
-                                quantity=base_quantity
-                            )
-                        else:  # LIMIT order
-                            order_result = self.client.create_order(
-                                symbol=symbol,
-                                side='BUY',
-                                type=order_type,
-                                timeInForce=time_in_force,
-                                quantity=base_quantity,
-                                price=f"{level['price']:.2f}"
-                            )
+                    
+                    # Make real API calls for both testnet and live trading
+                    # Use order settings from YAML config
+                    order_type = trading_cfg.get('order_type', 'LIMIT')
+                    time_in_force = trading_cfg.get('time_in_force', 'GTC')
+                    
+                    if order_type == 'MARKET':
+                        order_result = self.client.order_market_buy(
+                            symbol=symbol,
+                            quantity=base_quantity
+                        )
+                    else:  # LIMIT order
+                        order_result = self.client.create_order(
+                            symbol=symbol,
+                            side='BUY',
+                            type=order_type,
+                            timeInForce=time_in_force,
+                            quantity=base_quantity,
+                            price=f"{level['price']:.2f}"
+                        )
                     
                     if order_result.get('status') == 'FILLED':
                         # Update position via position manager (single source of truth)
@@ -164,41 +157,34 @@ class OrderExecutor:
                     continue
                 
                 try:
-                    # Check if testnet mode or simulation
+                    # Check if testnet mode - make real testnet API calls
                     api_cfg = self.cfg.get_api_config()
                     is_testnet = api_cfg.get('testnet', True)
                     
                     if is_testnet:
-                        # Simulate the sell order
                         print(f"🧪 [TESTNET SELL] Level {level['level']} @ ${level['price']:,.2f}")
-                        order_result = {
-                            'orderId': f"SIM_{level['level']}_{int(current_price)}",
-                            'status': 'FILLED',
-                            'executedQty': str(base_quantity),
-                            'fills': [{'price': str(level['price']), 'qty': str(base_quantity)}]
-                        }
                     else:
-                        # Real sell order using config settings
                         print(f"💰 [LIVE SELL] Level {level['level']} @ ${level['price']:,.2f}")
-                        
-                        # Use order settings from YAML config
-                        order_type = trading_cfg.get('order_type', 'LIMIT')
-                        time_in_force = trading_cfg.get('time_in_force', 'GTC')
-                        
-                        if order_type == 'MARKET':
-                            order_result = self.client.order_market_sell(
-                                symbol=symbol,
-                                quantity=base_quantity
-                            )
-                        else:  # LIMIT order
-                            order_result = self.client.create_order(
-                                symbol=symbol,
-                                side='SELL',
-                                type=order_type,
-                                timeInForce=time_in_force,
-                                quantity=base_quantity,
-                                price=f"{level['price']:.2f}"
-                            )
+                    
+                    # Make real API calls for both testnet and live trading
+                    # Use order settings from YAML config
+                    order_type = trading_cfg.get('order_type', 'LIMIT')
+                    time_in_force = trading_cfg.get('time_in_force', 'GTC')
+                    
+                    if order_type == 'MARKET':
+                        order_result = self.client.order_market_sell(
+                            symbol=symbol,
+                            quantity=base_quantity
+                        )
+                    else:  # LIMIT order
+                        order_result = self.client.create_order(
+                            symbol=symbol,
+                            side='SELL',
+                            type=order_type,
+                            timeInForce=time_in_force,
+                            quantity=base_quantity,
+                            price=f"{level['price']:.2f}"
+                        )
                     
                     if order_result.get('status') == 'FILLED':
                         # Update position via position manager (single source of truth)

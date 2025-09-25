@@ -21,12 +21,12 @@ trading:
   quote_currency: "USDT"          # What you're paying with
   
   # Order settings
-  base_order_quantity: 0.0001      # Base order size (will be calculated per grid)
+  base_order_quantity: 0.013      # Base order size (will be calculated per grid)
   order_type: "LIMIT"             # Order type (LIMIT recommended)
   time_in_force: "GTC"            # Good Till Cancelled
   
   # Timing
-  poll_interval: 5                # Seconds between market checks
+  poll_interval: 60              # Seconds between market checks
   
 # 🏗️ GRID STRATEGY SETTINGS
 grid:

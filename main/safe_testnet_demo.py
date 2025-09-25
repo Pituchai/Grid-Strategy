@@ -146,20 +146,36 @@ def main():
     print("="*50)
     
     try:
-        # Get current BTC price from testnet
+        # Get current BTC price and historical OHLC data from testnet
         ticker = client.get_symbol_ticker(symbol='BTCUSDT')
         current_price = float(ticker['price'])
         print(f"📊 Current BTC Price (Testnet): ${current_price:,.2f}")
         
-        # Create sample DataFrame with OHLC data for volatility analysis
+        # Get real OHLC data for volatility analysis
         import pandas as pd
-        sample_data = pd.DataFrame({
-            'open': [current_price] * 50,
-            'high': [current_price * 1.005] * 50,  # 0.5% higher
-            'low': [current_price * 0.995] * 50,   # 0.5% lower
-            'close': [current_price] * 50,
-            'volume': [1000] * 50
-        })
+        try:
+            # Get last 50 5-minute candles for volatility calculation
+            klines = client.get_klines(symbol='BTCUSDT', interval='5m', limit=50)
+            sample_data = pd.DataFrame(klines, columns=[
+                'timestamp', 'open', 'high', 'low', 'close', 'volume',
+                'close_time', 'quote_volume', 'count', 'taker_buy_volume', 
+                'taker_buy_quote_volume', 'ignore'
+            ])
+            # Convert to numeric and keep only OHLC columns
+            for col in ['open', 'high', 'low', 'close', 'volume']:
+                sample_data[col] = pd.to_numeric(sample_data[col])
+            sample_data = sample_data[['open', 'high', 'low', 'close', 'volume']]
+            print(f"✅ Loaded {len(sample_data)} real market data points for volatility analysis")
+        except Exception as e:
+            # Fallback to sample data if klines fetch fails
+            print(f"⚠️  Using sample data for volatility analysis: {e}")
+            sample_data = pd.DataFrame({
+                'open': [current_price] * 50,
+                'high': [current_price * 1.005] * 50,  # 0.5% higher
+                'low': [current_price * 0.995] * 50,   # 0.5% lower
+                'close': [current_price] * 50,
+                'volume': [1000] * 50
+            })
         
         # Generate grid strategy
         params = controller.define_parameters(sample_data)

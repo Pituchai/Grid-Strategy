@@ -1,7 +1,7 @@
 [
   {
-    "timestamp": "2025-09-24T16:44:48.362133",
-    "session_id": "20250924_164448",
+    "timestamp": "2025-09-25T07:48:12.257290",
+    "session_id": "20250925_074812",
     "event_type": "signal",
     "event_subtype": "fee_calculator_initialized",
     "data": {
@@ -14,8 +14,8 @@
     }
   },
   {
-    "timestamp": "2025-09-24T16:44:48.362804",
-    "session_id": "20250924_164448",
+    "timestamp": "2025-09-25T07:48:12.258248",
+    "session_id": "20250925_074812",
     "event_type": "signal",
     "event_subtype": "csv_trade_file_initialized",
     "data": {
@@ -38,180 +38,109 @@
     }
   },
   {
-    "timestamp": "2025-09-24T16:44:48.363713",
-    "session_id": "20250924_164448",
-    "event_type": "signal",
-    "event_subtype": "capital_initialized",
-    "data": {
-      "signal_type": "capital_initialized",
-      "total_capital": 20000.0,
-      "capital_per_grid": 2000.0,
-      "allocation_pct": 10.0
-    }
-  },
-  {
-    "timestamp": "2025-09-24T16:44:48.488066",
-    "session_id": "20250924_164448",
+    "timestamp": "2025-09-25T07:48:12.263200",
+    "session_id": "20250925_074812",
     "event_type": "signal",
     "event_subtype": "volatility_adjustment",
     "data": {
       "signal_type": "volatility_adjustment",
-      "volatility_ratio": 0.009999999999999861,
+      "volatility_ratio": 0.004995004995004923,
       "regime": "very_low",
       "original_spacing_pct": 0.5,
       "adjusted_spacing_pct": 0.35,
       "spacing_multiplier": 0.7,
       "position_multiplier": 1.1,
-      "atr_value": 1127.4000999999844,
-      "current_price": 112740.01
+      "atr_value": 499.9999999999927,
+      "current_price": 100099.99999999999
     }
   },
   {
-    "timestamp": "2025-09-24T16:44:48.488945",
-    "session_id": "20250924_164448",
+    "timestamp": "2025-09-25T07:48:12.263656",
+    "session_id": "20250925_074812",
     "event_type": "signal",
     "event_subtype": "grid_generated",
     "data": {
       "signal_type": "grid_generated",
-      "center_price": 112740.01,
+      "center_price": 100099.99999999999,
       "total_levels": 10,
-      "price_range": "110767.06 - 114712.96",
-      "spacing_pct": 0.35
+      "price_range": "97597.50 - 102602.50",
+      "spacing_pct": 0.5
     }
   },
   {
-    "timestamp": "2025-09-24T16:44:51.558365",
-    "session_id": "20250924_164451",
-    "event_type": "signal",
-    "event_subtype": "volume_filter_blocked",
+    "timestamp": "2025-09-25T07:48:12.264069",
+    "session_id": "20250925_074812",
+    "event_type": "trade",
+    "event_subtype": "execution",
     "data": {
-      "signal_type": "volume_filter_blocked",
-      "symbol": "BTCUSDT",
-      "current_volume": 702.53649,
-      "minimum_required": 1000,
-      "reason": "Volume $703 below minimum $1,000"
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.001,
+      "price": 98097.99999999999,
+      "timestamp": "2025-09-25T07:48:12.264065"
     }
   },
   {
-    "timestamp": "2025-09-24T16:44:51.683889",
-    "session_id": "20250924_164451",
+    "timestamp": "2025-09-25T07:48:12.264341",
+    "session_id": "20250925_074812",
     "event_type": "signal",
-    "event_subtype": "volume_filter_blocked",
+    "event_subtype": "fee_payment_recorded",
     "data": {
-      "signal_type": "volume_filter_blocked",
-      "symbol": "BTCUSDT",
-      "current_volume": 702.53649,
-      "minimum_required": 1000,
-      "reason": "Volume $703 below minimum $1,000"
+      "signal_type": "fee_payment_recorded",
+      "fee_amount": 0.09809799999999999,
+      "fee_asset": "USDT",
+      "order_type": "LIMIT",
+      "total_fees_paid": 0.09809799999999999,
+      "total_fee_savings": 0.0,
+      "payments_count": 1
     }
   },
   {
-    "timestamp": "2025-09-24T16:44:56.864422",
-    "session_id": "20250924_164456",
+    "timestamp": "2025-09-25T07:48:14.275428",
+    "session_id": "20250925_074814",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "sell",
+      "qty": 0.001,
+      "price": 100600.49999999997,
+      "timestamp": "2025-09-25T07:48:14.275377",
+      "pnl": 2.5024999999999853
+    }
+  },
+  {
+    "timestamp": "2025-09-25T07:48:14.278433",
+    "session_id": "20250925_074814",
     "event_type": "signal",
-    "event_subtype": "volume_filter_blocked",
+    "event_subtype": "trade_result_recorded",
     "data": {
-      "signal_type": "volume_filter_blocked",
-      "symbol": "BTCUSDT",
-      "current_volume": 702.53649,
-      "minimum_required": 1000,
-      "reason": "Volume $703 below minimum $1,000"
+      "signal_type": "trade_result_recorded",
+      "pnl": 2.5024999999999853,
+      "trade_id": "TEST_SELL_1",
+      "consecutive_losses": 0,
+      "current_drawdown": 0,
+      "daily_pnl": 2.5024999999999853
     }
   },
   {
-    "timestamp": "2025-09-24T16:44:56.978642",
-    "session_id": "20250924_164456",
+    "timestamp": "2025-09-25T07:48:14.279642",
+    "session_id": "20250925_074814",
     "event_type": "signal",
-    "event_subtype": "volume_filter_blocked",
+    "event_subtype": "fee_payment_recorded",
     "data": {
-      "signal_type": "volume_filter_blocked",
-      "symbol": "BTCUSDT",
-      "current_volume": 702.53649,
-      "minimum_required": 1000,
-      "reason": "Volume $703 below minimum $1,000"
+      "signal_type": "fee_payment_recorded",
+      "fee_amount": 0.10060049999999997,
+      "fee_asset": "USDT",
+      "order_type": "LIMIT",
+      "total_fees_paid": 0.19869849999999994,
+      "total_fee_savings": 0.0,
+      "payments_count": 2
     }
   },
   {
-    "timestamp": "2025-09-24T16:45:02.123143",
-    "session_id": "20250924_164502",
-    "event_type": "signal",
-    "event_subtype": "volume_filter_blocked",
-    "data": {
-      "signal_type": "volume_filter_blocked",
-      "symbol": "BTCUSDT",
-      "current_volume": 702.53649,
-      "minimum_required": 1000,
-      "reason": "Volume $703 below minimum $1,000"
-    }
-  },
-  {
-    "timestamp": "2025-09-24T16:45:02.239662",
-    "session_id": "20250924_164502",
-    "event_type": "signal",
-    "event_subtype": "volume_filter_blocked",
-    "data": {
-      "signal_type": "volume_filter_blocked",
-      "symbol": "BTCUSDT",
-      "current_volume": 702.53649,
-      "minimum_required": 1000,
-      "reason": "Volume $703 below minimum $1,000"
-    }
-  },
-  {
-    "timestamp": "2025-09-24T16:45:07.379237",
-    "session_id": "20250924_164507",
-    "event_type": "signal",
-    "event_subtype": "volume_filter_blocked",
-    "data": {
-      "signal_type": "volume_filter_blocked",
-      "symbol": "BTCUSDT",
-      "current_volume": 702.53649,
-      "minimum_required": 1000,
-      "reason": "Volume $703 below minimum $1,000"
-    }
-  },
-  {
-    "timestamp": "2025-09-24T16:45:07.494193",
-    "session_id": "20250924_164507",
-    "event_type": "signal",
-    "event_subtype": "volume_filter_blocked",
-    "data": {
-      "signal_type": "volume_filter_blocked",
-      "symbol": "BTCUSDT",
-      "current_volume": 702.53649,
-      "minimum_required": 1000,
-      "reason": "Volume $703 below minimum $1,000"
-    }
-  },
-  {
-    "timestamp": "2025-09-24T16:45:12.623040",
-    "session_id": "20250924_164512",
-    "event_type": "signal",
-    "event_subtype": "volume_filter_blocked",
-    "data": {
-      "signal_type": "volume_filter_blocked",
-      "symbol": "BTCUSDT",
-      "current_volume": 702.53649,
-      "minimum_required": 1000,
-      "reason": "Volume $703 below minimum $1,000"
-    }
-  },
-  {
-    "timestamp": "2025-09-24T16:45:12.735174",
-    "session_id": "20250924_164512",
-    "event_type": "signal",
-    "event_subtype": "volume_filter_blocked",
-    "data": {
-      "signal_type": "volume_filter_blocked",
-      "symbol": "BTCUSDT",
-      "current_volume": 702.53649,
-      "minimum_required": 1000,
-      "reason": "Volume $703 below minimum $1,000"
-    }
-  },
-  {
-    "timestamp": "2025-09-24T16:45:36.379938",
-    "session_id": "20250924_164536",
+    "timestamp": "2025-09-25T07:48:41.541250",
+    "session_id": "20250925_074841",
     "event_type": "signal",
     "event_subtype": "fee_calculator_initialized",
     "data": {
@@ -224,8 +153,8 @@
     }
   },
   {
-    "timestamp": "2025-09-24T16:45:36.381948",
-    "session_id": "20250924_164536",
+    "timestamp": "2025-09-25T07:48:41.543563",
+    "session_id": "20250925_074841",
     "event_type": "signal",
     "event_subtype": "capital_initialized",
     "data": {
@@ -236,33 +165,549 @@
     }
   },
   {
-    "timestamp": "2025-09-24T16:45:36.502508",
-    "session_id": "20250924_164536",
+    "timestamp": "2025-09-25T07:48:41.765565",
+    "session_id": "20250925_074841",
     "event_type": "signal",
     "event_subtype": "volatility_adjustment",
     "data": {
       "signal_type": "volatility_adjustment",
-      "volatility_ratio": 0.00999999999999982,
+      "volatility_ratio": 0.0009507114858622531,
       "regime": "very_low",
       "original_spacing_pct": 0.5,
       "adjusted_spacing_pct": 0.35,
       "spacing_multiplier": 0.7,
       "position_multiplier": 1.1,
-      "atr_value": 1127.3999999999796,
-      "current_price": 112740.0
+      "atr_value": 107.49428571428454,
+      "current_price": 113067.2
     }
   },
   {
-    "timestamp": "2025-09-24T16:45:36.503674",
-    "session_id": "20250924_164536",
+    "timestamp": "2025-09-25T07:48:41.766129",
+    "session_id": "20250925_074841",
     "event_type": "signal",
     "event_subtype": "grid_generated",
     "data": {
       "signal_type": "grid_generated",
-      "center_price": 112740.0,
+      "center_price": 113067.2,
       "total_levels": 10,
-      "price_range": "110767.05 - 114712.95",
+      "price_range": "111088.52 - 115045.88",
       "spacing_pct": 0.35
+    }
+  },
+  {
+    "timestamp": "2025-09-25T08:18:34.341358",
+    "session_id": "20250925_081834",
+    "event_type": "signal",
+    "event_subtype": "fee_calculator_initialized",
+    "data": {
+      "signal_type": "fee_calculator_initialized",
+      "maker_fee_pct": 0.1,
+      "taker_fee_pct": 0.1,
+      "use_fee_discount": false,
+      "fee_discount_pct": 0.0,
+      "include_fees_in_calculation": true
+    }
+  },
+  {
+    "timestamp": "2025-09-25T08:18:34.344498",
+    "session_id": "20250925_081834",
+    "event_type": "signal",
+    "event_subtype": "capital_initialized",
+    "data": {
+      "signal_type": "capital_initialized",
+      "total_capital": 20000.0,
+      "capital_per_grid": 2000.0,
+      "allocation_pct": 10.0
+    }
+  },
+  {
+    "timestamp": "2025-09-25T08:18:34.794886",
+    "session_id": "20250925_081834",
+    "event_type": "signal",
+    "event_subtype": "volatility_adjustment",
+    "data": {
+      "signal_type": "volatility_adjustment",
+      "volatility_ratio": 0.001311867639906135,
+      "regime": "very_low",
+      "original_spacing_pct": 0.5,
+      "adjusted_spacing_pct": 0.35,
+      "spacing_multiplier": 0.7,
+      "position_multiplier": 1.1,
+      "atr_value": 148.48000000000215,
+      "current_price": 113182.15
+    }
+  },
+  {
+    "timestamp": "2025-09-25T08:18:34.796426",
+    "session_id": "20250925_081834",
+    "event_type": "signal",
+    "event_subtype": "grid_generated",
+    "data": {
+      "signal_type": "grid_generated",
+      "center_price": 113182.15,
+      "total_levels": 10,
+      "price_range": "111201.46 - 115162.84",
+      "spacing_pct": 0.35
+    }
+  },
+  {
+    "timestamp": "2025-09-25T08:39:47.066854",
+    "session_id": "20250925_083947",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.0001,
+      "price": 112786.012475,
+      "timestamp": "2025-09-25T08:39:47.066714"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T08:39:47.073860",
+    "session_id": "20250925_083947",
+    "event_type": "signal",
+    "event_subtype": "fee_payment_recorded",
+    "data": {
+      "signal_type": "fee_payment_recorded",
+      "fee_amount": 0.011278601247499999,
+      "fee_asset": "USDT",
+      "order_type": "LIMIT",
+      "total_fees_paid": 0.011278601247499999,
+      "total_fee_savings": 0.0,
+      "payments_count": 1
+    }
+  },
+  {
+    "timestamp": "2025-09-25T08:39:47.076061",
+    "session_id": "20250925_083947",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "BTCUSDT",
+      "side": "BUY",
+      "quantity": 0.0001,
+      "price": 112786.012475,
+      "order_id": "SIM_-1_112688",
+      "grid_level": -1,
+      "timestamp": "2025-09-25T08:39:47.076049",
+      "trade_type": "GRID",
+      "pnl": 0
+    }
+  },
+  {
+    "timestamp": "2025-09-25T08:39:47.078290",
+    "session_id": "20250925_083947",
+    "event_type": "signal",
+    "event_subtype": "trade_saved",
+    "data": {
+      "signal_type": "trade_saved",
+      "trade_id": "BUY_-1_1758764387",
+      "side": "BUY",
+      "price": 112786.012475,
+      "pnl": 0.0
+    }
+  },
+  {
+    "timestamp": "2025-09-25T10:27:34.742664",
+    "session_id": "20250925_102734",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.0001,
+      "price": 112389.87495,
+      "timestamp": "2025-09-25T10:27:34.742553"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T10:27:34.751464",
+    "session_id": "20250925_102734",
+    "event_type": "signal",
+    "event_subtype": "fee_payment_recorded",
+    "data": {
+      "signal_type": "fee_payment_recorded",
+      "fee_amount": 0.011238987495,
+      "fee_asset": "USDT",
+      "order_type": "LIMIT",
+      "total_fees_paid": 0.022517588742499997,
+      "total_fee_savings": 0.0,
+      "payments_count": 2
+    }
+  },
+  {
+    "timestamp": "2025-09-25T10:27:34.753830",
+    "session_id": "20250925_102734",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "BTCUSDT",
+      "side": "BUY",
+      "quantity": 0.0001,
+      "price": 112389.87495,
+      "order_id": "SIM_-2_112373",
+      "grid_level": -2,
+      "timestamp": "2025-09-25T10:27:34.753821",
+      "trade_type": "GRID",
+      "pnl": 0
+    }
+  },
+  {
+    "timestamp": "2025-09-25T10:27:34.757258",
+    "session_id": "20250925_102734",
+    "event_type": "signal",
+    "event_subtype": "trade_saved",
+    "data": {
+      "signal_type": "trade_saved",
+      "trade_id": "BUY_-2_1758770854",
+      "side": "BUY",
+      "price": 112389.87495,
+      "pnl": 0.0
+    }
+  },
+  {
+    "timestamp": "2025-09-25T10:30:31.622391",
+    "session_id": "20250925_103031",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.0001,
+      "price": 111201.462375,
+      "timestamp": "2025-09-25T10:30:31.622254"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T10:30:31.630468",
+    "session_id": "20250925_103031",
+    "event_type": "signal",
+    "event_subtype": "fee_payment_recorded",
+    "data": {
+      "signal_type": "fee_payment_recorded",
+      "fee_amount": 0.0111201462375,
+      "fee_asset": "USDT",
+      "order_type": "LIMIT",
+      "total_fees_paid": 0.03363773498,
+      "total_fee_savings": 0.0,
+      "payments_count": 3
+    }
+  },
+  {
+    "timestamp": "2025-09-25T10:30:31.634153",
+    "session_id": "20250925_103031",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "BTCUSDT",
+      "side": "BUY",
+      "quantity": 0.0001,
+      "price": 111201.462375,
+      "order_id": "SIM_-5_106556",
+      "grid_level": -5,
+      "timestamp": "2025-09-25T10:30:31.634140",
+      "trade_type": "GRID",
+      "pnl": 0
+    }
+  },
+  {
+    "timestamp": "2025-09-25T10:30:31.637539",
+    "session_id": "20250925_103031",
+    "event_type": "signal",
+    "event_subtype": "trade_saved",
+    "data": {
+      "signal_type": "trade_saved",
+      "trade_id": "BUY_-5_1758771031",
+      "side": "BUY",
+      "price": 111201.462375,
+      "pnl": 0.0
+    }
+  },
+  {
+    "timestamp": "2025-09-25T10:30:31.639736",
+    "session_id": "20250925_103031",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.0001,
+      "price": 111597.59989999999,
+      "timestamp": "2025-09-25T10:30:31.639723"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T10:30:31.641899",
+    "session_id": "20250925_103031",
+    "event_type": "signal",
+    "event_subtype": "fee_payment_recorded",
+    "data": {
+      "signal_type": "fee_payment_recorded",
+      "fee_amount": 0.01115975999,
+      "fee_asset": "USDT",
+      "order_type": "LIMIT",
+      "total_fees_paid": 0.044797494970000004,
+      "total_fee_savings": 0.0,
+      "payments_count": 4
+    }
+  },
+  {
+    "timestamp": "2025-09-25T10:30:31.644545",
+    "session_id": "20250925_103031",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "BTCUSDT",
+      "side": "BUY",
+      "quantity": 0.0001,
+      "price": 111597.59989999999,
+      "order_id": "SIM_-4_106556",
+      "grid_level": -4,
+      "timestamp": "2025-09-25T10:30:31.644535",
+      "trade_type": "GRID",
+      "pnl": 0
+    }
+  },
+  {
+    "timestamp": "2025-09-25T10:30:31.647507",
+    "session_id": "20250925_103031",
+    "event_type": "signal",
+    "event_subtype": "trade_saved",
+    "data": {
+      "signal_type": "trade_saved",
+      "trade_id": "BUY_-4_1758771031",
+      "side": "BUY",
+      "price": 111597.59989999999,
+      "pnl": 0.0
+    }
+  },
+  {
+    "timestamp": "2025-09-25T10:30:31.649998",
+    "session_id": "20250925_103031",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.0001,
+      "price": 111993.737425,
+      "timestamp": "2025-09-25T10:30:31.649989"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T10:30:31.651750",
+    "session_id": "20250925_103031",
+    "event_type": "signal",
+    "event_subtype": "fee_payment_recorded",
+    "data": {
+      "signal_type": "fee_payment_recorded",
+      "fee_amount": 0.011199373742500001,
+      "fee_asset": "USDT",
+      "order_type": "LIMIT",
+      "total_fees_paid": 0.05599686871250001,
+      "total_fee_savings": 0.0,
+      "payments_count": 5
+    }
+  },
+  {
+    "timestamp": "2025-09-25T10:30:31.653435",
+    "session_id": "20250925_103031",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "BTCUSDT",
+      "side": "BUY",
+      "quantity": 0.0001,
+      "price": 111993.737425,
+      "order_id": "SIM_-3_106556",
+      "grid_level": -3,
+      "timestamp": "2025-09-25T10:30:31.653428",
+      "trade_type": "GRID",
+      "pnl": 0
+    }
+  },
+  {
+    "timestamp": "2025-09-25T10:30:31.655184",
+    "session_id": "20250925_103031",
+    "event_type": "signal",
+    "event_subtype": "trade_saved",
+    "data": {
+      "signal_type": "trade_saved",
+      "trade_id": "BUY_-3_1758771031",
+      "side": "BUY",
+      "price": 111993.737425,
+      "pnl": 0.0
+    }
+  },
+  {
+    "timestamp": "2025-09-25T13:53:38.597657",
+    "session_id": "20250925_135338",
+    "event_type": "signal",
+    "event_subtype": "fee_calculator_initialized",
+    "data": {
+      "signal_type": "fee_calculator_initialized",
+      "maker_fee_pct": 0.1,
+      "taker_fee_pct": 0.1,
+      "use_fee_discount": false,
+      "fee_discount_pct": 0.0,
+      "include_fees_in_calculation": true
+    }
+  },
+  {
+    "timestamp": "2025-09-25T13:53:38.600382",
+    "session_id": "20250925_135338",
+    "event_type": "signal",
+    "event_subtype": "capital_initialized",
+    "data": {
+      "signal_type": "capital_initialized",
+      "total_capital": 20000.0,
+      "capital_per_grid": 2000.0,
+      "allocation_pct": 10.0
+    }
+  },
+  {
+    "timestamp": "2025-09-25T13:53:38.841673",
+    "session_id": "20250925_135338",
+    "event_type": "signal",
+    "event_subtype": "volatility_adjustment",
+    "data": {
+      "signal_type": "volatility_adjustment",
+      "volatility_ratio": 0.0010627630081950462,
+      "regime": "very_low",
+      "original_spacing_pct": 0.5,
+      "adjusted_spacing_pct": 0.35,
+      "spacing_multiplier": 0.7,
+      "position_multiplier": 1.1,
+      "atr_value": 118.60500000000216,
+      "current_price": 111600.61
+    }
+  },
+  {
+    "timestamp": "2025-09-25T13:53:38.842679",
+    "session_id": "20250925_135338",
+    "event_type": "signal",
+    "event_subtype": "grid_generated",
+    "data": {
+      "signal_type": "grid_generated",
+      "center_price": 111600.61,
+      "total_levels": 10,
+      "price_range": "109647.60 - 113553.62",
+      "spacing_pct": 0.35
+    }
+  },
+  {
+    "timestamp": "2025-09-25T19:06:03.229656",
+    "session_id": "20250925_190603",
+    "event_type": "signal",
+    "event_subtype": "fee_calculator_initialized",
+    "data": {
+      "signal_type": "fee_calculator_initialized",
+      "maker_fee_pct": 0.1,
+      "taker_fee_pct": 0.1,
+      "use_fee_discount": false,
+      "fee_discount_pct": 0.0,
+      "include_fees_in_calculation": true
+    }
+  },
+  {
+    "timestamp": "2025-09-25T19:06:03.235266",
+    "session_id": "20250925_190603",
+    "event_type": "signal",
+    "event_subtype": "capital_initialized",
+    "data": {
+      "signal_type": "capital_initialized",
+      "total_capital": 19944.785598,
+      "capital_per_grid": 1994.4785597999999,
+      "allocation_pct": 10.0
+    }
+  },
+  {
+    "timestamp": "2025-09-25T19:06:03.470955",
+    "session_id": "20250925_190603",
+    "event_type": "signal",
+    "event_subtype": "volatility_adjustment",
+    "data": {
+      "signal_type": "volatility_adjustment",
+      "volatility_ratio": 0.0041365428690405435,
+      "regime": "very_low",
+      "original_spacing_pct": 0.5,
+      "adjusted_spacing_pct": 0.35,
+      "spacing_multiplier": 0.7,
+      "position_multiplier": 1.1,
+      "atr_value": 461.0185714285711,
+      "current_price": 111450.21
+    }
+  },
+  {
+    "timestamp": "2025-09-25T19:06:03.472148",
+    "session_id": "20250925_190603",
+    "event_type": "signal",
+    "event_subtype": "grid_generated",
+    "data": {
+      "signal_type": "grid_generated",
+      "center_price": 111450.21,
+      "total_levels": 10,
+      "price_range": "109499.83 - 113400.59",
+      "spacing_pct": 0.35
+    }
+  },
+  {
+    "timestamp": "2025-09-25T20:03:16.387856",
+    "session_id": "20250925_200316",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "",
+      "side": "buy",
+      "qty": 0.013,
+      "price": 111060.13426500002,
+      "timestamp": "2025-09-25T20:03:16.387178"
+    }
+  },
+  {
+    "timestamp": "2025-09-25T20:03:16.408950",
+    "session_id": "20250925_200316",
+    "event_type": "signal",
+    "event_subtype": "fee_payment_recorded",
+    "data": {
+      "signal_type": "fee_payment_recorded",
+      "fee_amount": 1.4437817454450002,
+      "fee_asset": "USDT",
+      "order_type": "LIMIT",
+      "total_fees_paid": 1.4437817454450002,
+      "total_fee_savings": 0.0,
+      "payments_count": 1
+    }
+  },
+  {
+    "timestamp": "2025-09-25T20:03:16.411767",
+    "session_id": "20250925_200316",
+    "event_type": "trade",
+    "event_subtype": "execution",
+    "data": {
+      "symbol": "BTCUSDT",
+      "side": "BUY",
+      "quantity": 0.013,
+      "price": 111060.13426500002,
+      "order_id": 2888572,
+      "grid_level": -1,
+      "timestamp": "2025-09-25T20:03:16.411750",
+      "trade_type": "GRID",
+      "pnl": 0
+    }
+  },
+  {
+    "timestamp": "2025-09-25T20:03:16.414972",
+    "session_id": "20250925_200316",
+    "event_type": "signal",
+    "event_subtype": "trade_saved",
+    "data": {
+      "signal_type": "trade_saved",
+      "trade_id": "BUY_-1_1758805396",
+      "side": "BUY",
+      "price": 111060.13426500002,
+      "pnl": 0.0
     }
   }
 ]
