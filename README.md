@@ -22,7 +22,7 @@ Create `secrets.json` in the project root:
 ```
 
 💡 **For pseudo accounts**: Use the same keys for both testnet and live trading  
-🔗 **For real testnet**: Get separate keys from https://testnet.binance.vision/
+🔗 **For real testnet**: Get separate keys from https://testnet.binance.vision/  (recommend)
 
 ### 2️⃣ **Install Dependencies**
 
