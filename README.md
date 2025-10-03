@@ -1,5 +1,7 @@
 # 🎯 Dynamic Grid Trading Strategy
 
+** Bug occurs on when restart the bot, it will not track the previous action**
+
 **Optimal Profitable Configuration**: ±2.5% range, 0.50% spacing, 10 grids, 10% capital per grid
 
 **Expected Performance**: 0.35% per cycle → 3.5-5.25% daily → 77-115% monthly returns
