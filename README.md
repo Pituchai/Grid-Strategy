@@ -176,7 +176,7 @@ python scripts/check_balance.py
 python scripts/manage_logs.py --monitor
 ```
 
-### Generate Reports
+### Generate Reports (On process)
 ```bash
 # Daily performance
 python scripts/manage_logs.py --report --days 1
