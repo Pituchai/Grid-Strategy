@@ -103,7 +103,7 @@ advanced:
   min_volume_24h: 10        # Minimum 24h volume for trading
   
   # Technical indicators
-  use_technical_indicators: false # Use additional indicators (RSI, MACD, etc.)
+  use_technical_indicators: true # Use additional indicators (RSI, MACD, etc.)
   rsi_oversold: 30               # RSI oversold level
   rsi_overbought: 70             # RSI overbought level
   
